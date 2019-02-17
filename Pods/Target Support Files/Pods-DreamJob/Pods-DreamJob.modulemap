@@ -1,0 +1,6 @@
+framework module Pods_DreamJob {
+  umbrella header "Pods-DreamJob-umbrella.h"
+
+  export *
+  module * { export * }
+}

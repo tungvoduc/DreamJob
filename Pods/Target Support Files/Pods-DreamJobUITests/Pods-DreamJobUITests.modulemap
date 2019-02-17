@@ -1,0 +1,6 @@
+framework module Pods_DreamJobUITests {
+  umbrella header "Pods-DreamJobUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
