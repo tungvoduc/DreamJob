@@ -8,6 +8,7 @@ target 'DreamJob' do
   # Pods for DreamJob
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'DTContainerController'
 
   target 'DreamJobUITests' do
     inherit! :search_paths
