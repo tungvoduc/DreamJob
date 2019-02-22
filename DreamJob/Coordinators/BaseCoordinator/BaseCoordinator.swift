@@ -6,15 +6,13 @@
 //  Copyright © 2019 Vo Tung. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CoordinatorType {
     var router: RouterType { get }
 }
 
 class BaseCoordinator: CoordinatorType, Presentable {
-    
-    let disposeBag = DisposeBag()
     
     private let id = UUID()
     

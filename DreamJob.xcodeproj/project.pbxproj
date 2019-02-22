@@ -13,8 +13,6 @@
 		52167932221E05EB009DD2A1 /* JobListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52167930221E05EB009DD2A1 /* JobListViewController.xib */; };
 		52167935221E05FD009DD2A1 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52167933221E05FD009DD2A1 /* CourseListViewController.swift */; };
 		52167936221E05FD009DD2A1 /* CourseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52167934221E05FD009DD2A1 /* CourseListViewController.xib */; };
-		52167939221E060C009DD2A1 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52167937221E060C009DD2A1 /* CourseListViewController.swift */; };
-		5216793A221E060C009DD2A1 /* CourseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52167938221E060C009DD2A1 /* CourseListViewController.xib */; };
 		5216793D221E0617009DD2A1 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216793B221E0617009DD2A1 /* JobDetailViewController.swift */; };
 		5216793E221E0617009DD2A1 /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5216793C221E0617009DD2A1 /* JobDetailViewController.xib */; };
 		52167941221E0623009DD2A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216793F221E0623009DD2A1 /* ProfileViewController.swift */; };
@@ -30,6 +28,8 @@
 		52E4696122207A5600EBD838 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696022207A5600EBD838 /* Presentable.swift */; };
 		52E4696322207A7600EBD838 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696222207A7600EBD838 /* Router.swift */; };
 		52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696422207BD900EBD838 /* BaseCoordinator.swift */; };
+		52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469662220805C00EBD838 /* CourseDetailViewController.swift */; };
+		52E469692220805C00EBD838 /* CourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E469672220805C00EBD838 /* CourseDetailViewController.xib */; };
 		57EC281028C2B2F0703AF95E /* Pods_DreamJobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592F2E3B5BD1ABEA87EFE4A /* Pods_DreamJobUITests.framework */; };
 		FDBBC5A155D1C6BA1CAC1879 /* Pods_DreamJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */; };
 /* End PBXBuildFile section */
@@ -52,8 +52,6 @@
 		52167930221E05EB009DD2A1 /* JobListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobListViewController.xib; sourceTree = "<group>"; };
 		52167933221E05FD009DD2A1 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
 		52167934221E05FD009DD2A1 /* CourseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseListViewController.xib; sourceTree = "<group>"; };
-		52167937221E060C009DD2A1 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
-		52167938221E060C009DD2A1 /* CourseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseListViewController.xib; sourceTree = "<group>"; };
 		5216793B221E0617009DD2A1 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		5216793C221E0617009DD2A1 /* JobDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailViewController.xib; sourceTree = "<group>"; };
 		5216793F221E0623009DD2A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		52E4696022207A5600EBD838 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		52E4696222207A7600EBD838 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		52E4696422207BD900EBD838 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		52E469662220805C00EBD838 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
+		52E469672220805C00EBD838 /* CourseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseDetailViewController.xib; sourceTree = "<group>"; };
 		996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F7CE9818CB29BC37E4E03B /* Pods-DreamJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJob.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJob/Pods-DreamJob.release.xcconfig"; sourceTree = "<group>"; };
 		E592F2E3B5BD1ABEA87EFE4A /* Pods_DreamJobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,8 +233,8 @@
 		52167923221DF95C009DD2A1 /* CourseDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				52167937221E060C009DD2A1 /* CourseListViewController.swift */,
-				52167938221E060C009DD2A1 /* CourseListViewController.xib */,
+				52E469662220805C00EBD838 /* CourseDetailViewController.swift */,
+				52E469672220805C00EBD838 /* CourseDetailViewController.xib */,
 			);
 			path = CourseDetailViewController;
 			sourceTree = "<group>";
@@ -484,10 +484,10 @@
 				5220A7AF2219E90200757250 /* LaunchScreen.storyboard in Resources */,
 				5216793E221E0617009DD2A1 /* JobDetailViewController.xib in Resources */,
 				5220A7AC2219E90200757250 /* Assets.xcassets in Resources */,
+				52E469692220805C00EBD838 /* CourseDetailViewController.xib in Resources */,
 				5220A7A72219E8FE00757250 /* Main.storyboard in Resources */,
 				52167918221DF7CE009DD2A1 /* ProfileUpdateViewController.xib in Resources */,
 				52167932221E05EB009DD2A1 /* JobListViewController.xib in Resources */,
-				5216793A221E060C009DD2A1 /* CourseListViewController.xib in Resources */,
 				52167936221E05FD009DD2A1 /* CourseListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,13 +610,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				52167947221E0887009DD2A1 /* DataStack.swift in Sources */,
+				52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */,
 				5220A7A42219E8FE00757250 /* ViewController.swift in Sources */,
 				52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */,
 				52167917221DF7CE009DD2A1 /* ProfileUpdateViewController.swift in Sources */,
 				52167931221E05EB009DD2A1 /* JobListViewController.swift in Sources */,
 				52E4696322207A7600EBD838 /* Router.swift in Sources */,
 				5220A7A22219E8FE00757250 /* AppDelegate.swift in Sources */,
-				52167939221E060C009DD2A1 /* CourseListViewController.swift in Sources */,
 				5216793D221E0617009DD2A1 /* JobDetailViewController.swift in Sources */,
 				52167941221E0623009DD2A1 /* ProfileViewController.swift in Sources */,
 				5220A7AA2219E8FE00757250 /* DreamJob.xcdatamodeld in Sources */,
