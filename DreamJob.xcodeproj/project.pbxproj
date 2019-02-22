@@ -30,12 +30,20 @@
 		52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696422207BD900EBD838 /* BaseCoordinator.swift */; };
 		52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469662220805C00EBD838 /* CourseDetailViewController.swift */; };
 		52E469692220805C00EBD838 /* CourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E469672220805C00EBD838 /* CourseDetailViewController.xib */; };
+		52E46971222087DE00EBD838 /* DreamJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E46970222087DE00EBD838 /* DreamJobTests.swift */; };
 		57EC281028C2B2F0703AF95E /* Pods_DreamJobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592F2E3B5BD1ABEA87EFE4A /* Pods_DreamJobUITests.framework */; };
 		FDBBC5A155D1C6BA1CAC1879 /* Pods_DreamJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		5220A7B62219E90300757250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5220A7962219E8FE00757250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5220A79D2219E8FE00757250;
+			remoteInfo = DreamJob;
+		};
+		52E46973222087DE00EBD838 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5220A7962219E8FE00757250 /* Project object */;
 			proxyType = 1;
@@ -73,6 +81,9 @@
 		52E4696422207BD900EBD838 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		52E469662220805C00EBD838 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		52E469672220805C00EBD838 /* CourseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseDetailViewController.xib; sourceTree = "<group>"; };
+		52E4696E222087DE00EBD838 /* DreamJobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamJobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E46970222087DE00EBD838 /* DreamJobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamJobTests.swift; sourceTree = "<group>"; };
+		52E46972222087DE00EBD838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F7CE9818CB29BC37E4E03B /* Pods-DreamJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJob.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJob/Pods-DreamJob.release.xcconfig"; sourceTree = "<group>"; };
 		E592F2E3B5BD1ABEA87EFE4A /* Pods_DreamJobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +105,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				57EC281028C2B2F0703AF95E /* Pods_DreamJobUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E4696B222087DE00EBD838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +369,7 @@
 			children = (
 				5220A7A02219E8FE00757250 /* DreamJob */,
 				5220A7B82219E90300757250 /* DreamJobUITests */,
+				52E4696F222087DE00EBD838 /* DreamJobTests */,
 				5220A79F2219E8FE00757250 /* Products */,
 				3D45E6DCA0FFBAD8A59A19BC /* Pods */,
 				0F77A420A1E9F5D0580C281C /* Frameworks */,
@@ -362,6 +381,7 @@
 			children = (
 				5220A79E2219E8FE00757250 /* DreamJob.app */,
 				5220A7B52219E90300757250 /* DreamJobUITests.xctest */,
+				52E4696E222087DE00EBD838 /* DreamJobTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +413,63 @@
 				5220A7BB2219E90300757250 /* Info.plist */,
 			);
 			path = DreamJobUITests;
+			sourceTree = "<group>";
+		};
+		52E4696F222087DE00EBD838 /* DreamJobTests */ = {
+			isa = PBXGroup;
+			children = (
+				52E4697D2220881C00EBD838 /* Services */,
+				52E4697C2220881600EBD838 /* Routers */,
+				52E4697B2220881000EBD838 /* Helpers */,
+				52E4697A2220880A00EBD838 /* Coordinators */,
+				52E469792220880500EBD838 /* ViewModels */,
+				52E46978222087FE00EBD838 /* ViewControllers */,
+				52E46970222087DE00EBD838 /* DreamJobTests.swift */,
+				52E46972222087DE00EBD838 /* Info.plist */,
+			);
+			path = DreamJobTests;
+			sourceTree = "<group>";
+		};
+		52E46978222087FE00EBD838 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52E469792220880500EBD838 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52E4697A2220880A00EBD838 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		52E4697B2220881000EBD838 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		52E4697C2220881600EBD838 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		52E4697D2220881C00EBD838 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +514,24 @@
 			productReference = 5220A7B52219E90300757250 /* DreamJobUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		52E4696D222087DE00EBD838 /* DreamJobTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E46975222087DE00EBD838 /* Build configuration list for PBXNativeTarget "DreamJobTests" */;
+			buildPhases = (
+				52E4696A222087DE00EBD838 /* Sources */,
+				52E4696B222087DE00EBD838 /* Frameworks */,
+				52E4696C222087DE00EBD838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52E46974222087DE00EBD838 /* PBXTargetDependency */,
+			);
+			name = DreamJobTests;
+			productName = DreamJobTests;
+			productReference = 52E4696E222087DE00EBD838 /* DreamJobTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -451,6 +546,10 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					5220A7B42219E90300757250 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5220A79D2219E8FE00757250;
+					};
+					52E4696D222087DE00EBD838 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 5220A79D2219E8FE00757250;
 					};
@@ -470,6 +569,7 @@
 			projectRoot = "";
 			targets = (
 				5220A79D2219E8FE00757250 /* DreamJob */,
+				52E4696D222087DE00EBD838 /* DreamJobTests */,
 				5220A7B42219E90300757250 /* DreamJobUITests */,
 			);
 		};
@@ -493,6 +593,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5220A7B32219E90300757250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E4696C222087DE00EBD838 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -633,6 +740,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52E4696A222087DE00EBD838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E46971222087DE00EBD838 /* DreamJobTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -640,6 +755,11 @@
 			isa = PBXTargetDependency;
 			target = 5220A79D2219E8FE00757250 /* DreamJob */;
 			targetProxy = 5220A7B62219E90300757250 /* PBXContainerItemProxy */;
+		};
+		52E46974222087DE00EBD838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5220A79D2219E8FE00757250 /* DreamJob */;
+			targetProxy = 52E46973222087DE00EBD838 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -859,6 +979,46 @@
 			};
 			name = Release;
 		};
+		52E46976222087DE00EBD838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8HFXRRGLT;
+				INFOPLIST_FILE = DreamJobTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tungvoduc.DreamJobTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamJob.app/DreamJob";
+			};
+			name = Debug;
+		};
+		52E46977222087DE00EBD838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8HFXRRGLT;
+				INFOPLIST_FILE = DreamJobTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tungvoduc.DreamJobTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamJob.app/DreamJob";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -885,6 +1045,15 @@
 			buildConfigurations = (
 				5220A7C22219E90300757250 /* Debug */,
 				5220A7C32219E90300757250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E46975222087DE00EBD838 /* Build configuration list for PBXNativeTarget "DreamJobTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E46976222087DE00EBD838 /* Debug */,
+				52E46977222087DE00EBD838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
