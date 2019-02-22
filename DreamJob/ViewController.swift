@@ -13,6 +13,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let course = Course()
+        let job = Job()
+        let profile = Profile()
+        let skill = Skill()
+        
+        profile.addToCompletedCourses(course)
+        job.addToSkills(skill)
+        course.addToSkills(skill)
+        
     }
 
 
