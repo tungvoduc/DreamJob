@@ -10,6 +10,19 @@ import Foundation
 @testable import DreamJob
 
 class MockProfileManager: ProfileManaging {
+    func createProfile(with email: String, studentId: String, firstName: String, lastName: String, socialSecurityNumber: String, dateOfBirth: Date, address: String) -> Profile {
+        let profile = Profile()
+        profile.email = email
+        profile.id = studentId
+        profile.address = address
+        profile.lastName = lastName
+        profile.firstName = firstName
+        profile.dateOfBirth = dateOfBirth
+        profile.socialSecurityNumber = socialSecurityNumber
+        self.profile = profile
+        return profile
+    }
+    
     
     var profile: Profile?
     

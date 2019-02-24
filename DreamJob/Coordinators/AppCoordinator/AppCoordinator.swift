@@ -35,14 +35,4 @@ final class AppCoordinator: BaseCoordinator {
         return ProfileUpdateViewController.fromNib()
     }
     
-    func setProfile(with email: String, studentId: String, firstName: String, lastName: String, socialSecurityNumber: String, dateOfBirth: Date, address: String) {
-        let hasProfile = profileManager.hasProfile()
-        
-        profileManager.setProfile(with: email, studentId: studentId, firstName: firstName, lastName: lastName, socialSecurityNumber: socialSecurityNumber, dateOfBirth: dateOfBirth, address: address)
-        
-        if !hasProfile {
-            containerController.show(currentViewController(), animated: true, completion: nil)
-        }
-    }
-    
 }

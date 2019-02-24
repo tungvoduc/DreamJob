@@ -39,22 +39,9 @@ class AppCoordinatorTests: XCTestCase {
         profileManager.profile = Profile()
         expect(self.sut.currentViewController() is ProfileViewController).to(equal(true))
     }
-    
-    func testSettingNewProfileThroughProfileManager() {
-        sut.setProfile(with: "", studentId: "", firstName: "", lastName: "", socialSecurityNumber: "", dateOfBirth: Date(), address: "")
-        expect(self.profileManager.didSetNewProfile).to(beTrue())
-    }
 
     func testWindowRootViewController() {
         expect(self.window.rootViewController).to(equal(sut.containerController))
-    }
-    
-    func testUpdatingNewProfileWillChangeContainerCurrentViewController() {
-        profileManager.profile = nil
-        expect(self.sut.containerController.currentViewController is ProfileUpdateViewController).to(equal(true))
-        
-        sut.setProfile(with: "", studentId: "", firstName: "", lastName: "", socialSecurityNumber: "", dateOfBirth: Date(), address: "")
-        expect(self.sut.containerController.currentViewController is ProfileViewController).to(equal(true))
     }
 
 }

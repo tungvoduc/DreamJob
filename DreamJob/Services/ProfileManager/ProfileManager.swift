@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ProfileManaging {
-    func setProfile(with email: String, studentId: String, firstName: String, lastName: String, socialSecurityNumber: String, dateOfBirth: Date, address: String)
+    func createProfile(with email: String, studentId: String, firstName: String, lastName: String, socialSecurityNumber: String, dateOfBirth: Date, address: String) -> Profile
     func currentProfile() -> Profile?
 }
 
@@ -27,8 +27,16 @@ class ProfileManager: ProfileManaging {
         self.coreDataStack = coreDataStack
     }
     
-    func setProfile(with email: String, studentId: String, firstName: String, lastName: String, socialSecurityNumber: String, dateOfBirth: Date, address: String) {
-        
+    func createProfile(with email: String, studentId: String, firstName: String, lastName: String, socialSecurityNumber: String, dateOfBirth: Date, address: String) -> Profile {
+        let profile = coreDataStack.createObject(ofType: Profile.self)
+        profile.email = email
+        profile.id = studentId
+        profile.address = address
+        profile.lastName = lastName
+        profile.firstName = firstName
+        profile.dateOfBirth = dateOfBirth
+        profile.socialSecurityNumber = socialSecurityNumber
+        return profile
     }
     
     func currentProfile() -> Profile? {
