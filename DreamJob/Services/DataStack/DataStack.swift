@@ -9,11 +9,17 @@
 import Foundation
 import CoreData
 
-class DataStack {
-    
+protocol CoreDataStack {
+    func createObject<Type: NSManagedObject>(ofType type: Type.Type) -> Type
+    func deleteObject(_ object: NSManagedObject)
+    func deleteAllRecords<Type: NSManagedObject>(ofType type: Type.Type, predicate: NSPredicate?)
+    func allRecords<Type: NSManagedObject>(ofType type: Type.Type) -> [Type]
+    func saveContext()
+}
+
+class DataStack: CoreDataStack {
     
     // MARK: - Core Data stack
-    
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -41,8 +47,52 @@ class DataStack {
         return container
     }()
     
-    // MARK: - Core Data Saving support
+    private var viewContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
     
+    func createObject<Type: NSManagedObject>(ofType type: Type.Type) -> Type {
+        return NSEntityDescription.insertNewObject(forEntityName: entityName(for: type), into: viewContext) as! Type
+    }
+    
+    func deleteObject(_ object: NSManagedObject) {
+        persistentContainer.viewContext.delete(object)
+    }
+    
+    func allRecords<Type>(ofType type: Type.Type) -> [Type] where Type : NSManagedObject {
+        let request = fetchRequest(ofType: type)
+        
+        do {
+            let result = try viewContext.fetch(request)
+            return result
+        } catch {
+            return []
+        }
+    }
+    
+    func deleteAllRecords<Type: NSManagedObject>(ofType type: Type.Type, predicate: NSPredicate? = nil) {
+        let request: NSFetchRequest<NSFetchRequestResult> = fetchRequest(ofType: type) as! NSFetchRequest<NSFetchRequestResult>
+        request.predicate = predicate
+        let delete = NSBatchDeleteRequest(fetchRequest: request)
+        do {
+            if let coordinator = viewContext.persistentStoreCoordinator {
+                try coordinator.execute(delete, with: viewContext)
+            }
+        } catch {
+            print("Cannot delete \(type) objects")
+        }
+    }
+    
+    private func fetchRequest<Type: NSManagedObject>(ofType type: Type.Type) -> NSFetchRequest<Type> {
+        return NSFetchRequest(entityName: entityName(for: type))
+    }
+    
+    private func entityName<Type: NSManagedObject>(for type: Type.Type) -> String {
+        return String(describing: type)
+    }
+    
+    // MARK: - Core Data Saving support
+
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
