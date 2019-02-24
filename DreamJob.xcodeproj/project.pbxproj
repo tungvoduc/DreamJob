@@ -31,7 +31,12 @@
 		52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696422207BD900EBD838 /* BaseCoordinator.swift */; };
 		52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469662220805C00EBD838 /* CourseDetailViewController.swift */; };
 		52E469692220805C00EBD838 /* CourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E469672220805C00EBD838 /* CourseDetailViewController.xib */; };
-		52E46971222087DE00EBD838 /* DreamJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E46970222087DE00EBD838 /* DreamJobTests.swift */; };
+		52E469832220893200EBD838 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469822220893200EBD838 /* AppCoordinatorTests.swift */; };
+		52E469852222A5BB00EBD838 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469842222A5BB00EBD838 /* AppCoordinator.swift */; };
+		52E469882222AD3100EBD838 /* MockCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469872222AD3100EBD838 /* MockCoreDataStack.swift */; };
+		52E4698B2222B5E300EBD838 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4698A2222B5E300EBD838 /* ProfileManager.swift */; };
+		52E4698E2222B82100EBD838 /* MockProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4698D2222B82100EBD838 /* MockProfileManager.swift */; };
+		52E469912222CB1600EBD838 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469902222CB1600EBD838 /* UIViewController+Helper.swift */; };
 		FDBBC5A155D1C6BA1CAC1879 /* Pods_DreamJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,11 +87,18 @@
 		52E469662220805C00EBD838 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		52E469672220805C00EBD838 /* CourseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseDetailViewController.xib; sourceTree = "<group>"; };
 		52E4696E222087DE00EBD838 /* DreamJobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamJobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52E46970222087DE00EBD838 /* DreamJobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamJobTests.swift; sourceTree = "<group>"; };
 		52E46972222087DE00EBD838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E469812220893200EBD838 /* DreamJobTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DreamJobTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		52E469822220893200EBD838 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		52E469842222A5BB00EBD838 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		52E469872222AD3100EBD838 /* MockCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataStack.swift; sourceTree = "<group>"; };
+		52E4698A2222B5E300EBD838 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		52E4698D2222B82100EBD838 /* MockProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfileManager.swift; sourceTree = "<group>"; };
+		52E469902222CB1600EBD838 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
 		5837D059D71DE2E906604E80 /* Pods_DreamJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F7CE9818CB29BC37E4E03B /* Pods-DreamJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJob.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJob/Pods-DreamJob.release.xcconfig"; sourceTree = "<group>"; };
+		CC18809B7FA18A159E5F71CB /* Pods-DreamJobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJobTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJobTests/Pods-DreamJobTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E592F2E3B5BD1ABEA87EFE4A /* Pods_DreamJobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CCDE62A9753A5C3B761F76 /* Pods-DreamJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJob.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJob/Pods-DreamJob.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,6 +333,7 @@
 		5216792C221E0504009DD2A1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				52E4698F2222CAF900EBD838 /* UIViewController */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -328,6 +341,7 @@
 		5216792D221E050B009DD2A1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				52E469892222B5D100EBD838 /* ProfileManager */,
 				5216792E221E059F009DD2A1 /* DataStack */,
 			);
 			path = Services;
@@ -344,6 +358,7 @@
 		52167943221E0654009DD2A1 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				52E469842222A5BB00EBD838 /* AppCoordinator.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -369,8 +384,8 @@
 			isa = PBXGroup;
 			children = (
 				5220A7A02219E8FE00757250 /* DreamJob */,
-				5220A7B82219E90300757250 /* DreamJobUITests */,
 				52E4696F222087DE00EBD838 /* DreamJobTests */,
+				5220A7B82219E90300757250 /* DreamJobUITests */,
 				5220A79F2219E8FE00757250 /* Products */,
 				3D45E6DCA0FFBAD8A59A19BC /* Pods */,
 				0F77A420A1E9F5D0580C281C /* Frameworks */,
@@ -426,7 +441,6 @@
 				52E4697A2220880A00EBD838 /* Coordinators */,
 				52E469792220880500EBD838 /* ViewModels */,
 				52E46978222087FE00EBD838 /* ViewControllers */,
-				52E46970222087DE00EBD838 /* DreamJobTests.swift */,
 				52E46972222087DE00EBD838 /* Info.plist */,
 			);
 			path = DreamJobTests;
@@ -449,6 +463,7 @@
 		52E4697A2220880A00EBD838 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				52E469802220892800EBD838 /* AppCoordinator */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -470,8 +485,50 @@
 		52E4697D2220881C00EBD838 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				52E4698C2222B81500EBD838 /* MockProfileManager */,
+				52E469862222AD1200EBD838 /* MockCoreDataStack */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		52E469802220892800EBD838 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				52E469822220893200EBD838 /* AppCoordinatorTests.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		52E469862222AD1200EBD838 /* MockCoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				52E469872222AD3100EBD838 /* MockCoreDataStack.swift */,
+			);
+			path = MockCoreDataStack;
+			sourceTree = "<group>";
+		};
+		52E469892222B5D100EBD838 /* ProfileManager */ = {
+			isa = PBXGroup;
+			children = (
+				52E4698A2222B5E300EBD838 /* ProfileManager.swift */,
+			);
+			path = ProfileManager;
+			sourceTree = "<group>";
+		};
+		52E4698C2222B81500EBD838 /* MockProfileManager */ = {
+			isa = PBXGroup;
+			children = (
+				52E4698D2222B82100EBD838 /* MockProfileManager.swift */,
+			);
+			path = MockProfileManager;
+			sourceTree = "<group>";
+		};
+		52E4698F2222CAF900EBD838 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52E469902222CB1600EBD838 /* UIViewController+Helper.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -721,12 +778,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E469912222CB1600EBD838 /* UIViewController+Helper.swift in Sources */,
 				52167947221E0887009DD2A1 /* DataStack.swift in Sources */,
+				52E4698B2222B5E300EBD838 /* ProfileManager.swift in Sources */,
 				52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */,
 				5220A7A42219E8FE00757250 /* ViewController.swift in Sources */,
 				52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */,
 				52167917221DF7CE009DD2A1 /* ProfileUpdateViewController.swift in Sources */,
 				52167931221E05EB009DD2A1 /* JobListViewController.swift in Sources */,
+				52E469852222A5BB00EBD838 /* AppCoordinator.swift in Sources */,
 				52E4696322207A7600EBD838 /* Router.swift in Sources */,
 				5220A7A22219E8FE00757250 /* AppDelegate.swift in Sources */,
 				5216793D221E0617009DD2A1 /* JobDetailViewController.swift in Sources */,
@@ -749,7 +809,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E46971222087DE00EBD838 /* DreamJobTests.swift in Sources */,
+				52E4698E2222B82100EBD838 /* MockProfileManager.swift in Sources */,
+				52E469832220893200EBD838 /* AppCoordinatorTests.swift in Sources */,
+				52E469882222AD3100EBD838 /* MockCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
