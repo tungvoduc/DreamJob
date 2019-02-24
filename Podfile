@@ -10,10 +10,10 @@ target 'DreamJob' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'DTContainerController'
 
-  target 'DreamJobUITests' do
+  target 'DreamJobTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Nimble', '~> 6.0.0'
+    pod 'Nimble'
     pod 'RxBlocking', '~> 4.0'
     pod 'RxTest',     '~> 4.0'
   end

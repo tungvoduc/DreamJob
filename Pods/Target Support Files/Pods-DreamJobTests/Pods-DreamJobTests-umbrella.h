@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_DreamJobUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_DreamJobUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_DreamJobTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_DreamJobTestsVersionString[];
 

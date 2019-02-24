@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A480F1197E0E4A962F32D6A /* Pods_DreamJobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5837D059D71DE2E906604E80 /* Pods_DreamJobTests.framework */; };
 		52167917221DF7CE009DD2A1 /* ProfileUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52167915221DF7CE009DD2A1 /* ProfileUpdateViewController.swift */; };
 		52167918221DF7CE009DD2A1 /* ProfileUpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52167916221DF7CE009DD2A1 /* ProfileUpdateViewController.xib */; };
 		52167931221E05EB009DD2A1 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216792F221E05EB009DD2A1 /* JobListViewController.swift */; };
@@ -31,7 +32,6 @@
 		52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469662220805C00EBD838 /* CourseDetailViewController.swift */; };
 		52E469692220805C00EBD838 /* CourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E469672220805C00EBD838 /* CourseDetailViewController.xib */; };
 		52E46971222087DE00EBD838 /* DreamJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E46970222087DE00EBD838 /* DreamJobTests.swift */; };
-		57EC281028C2B2F0703AF95E /* Pods_DreamJobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592F2E3B5BD1ABEA87EFE4A /* Pods_DreamJobUITests.framework */; };
 		FDBBC5A155D1C6BA1CAC1879 /* Pods_DreamJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		001D0537F498E3EC5EA088FF /* Pods-DreamJobUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJobUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJobUITests/Pods-DreamJobUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0106ABFF0EBAF2832867C3F9 /* Pods-DreamJobTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJobTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJobTests/Pods-DreamJobTests.release.xcconfig"; sourceTree = "<group>"; };
 		52167915221DF7CE009DD2A1 /* ProfileUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewController.swift; sourceTree = "<group>"; };
 		52167916221DF7CE009DD2A1 /* ProfileUpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileUpdateViewController.xib; sourceTree = "<group>"; };
 		5216792F221E05EB009DD2A1 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
@@ -84,11 +84,11 @@
 		52E4696E222087DE00EBD838 /* DreamJobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamJobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E46970222087DE00EBD838 /* DreamJobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamJobTests.swift; sourceTree = "<group>"; };
 		52E46972222087DE00EBD838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5837D059D71DE2E906604E80 /* Pods_DreamJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F7CE9818CB29BC37E4E03B /* Pods-DreamJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJob.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJob/Pods-DreamJob.release.xcconfig"; sourceTree = "<group>"; };
 		E592F2E3B5BD1ABEA87EFE4A /* Pods_DreamJobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CCDE62A9753A5C3B761F76 /* Pods-DreamJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJob.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJob/Pods-DreamJob.debug.xcconfig"; sourceTree = "<group>"; };
-		FF6FBD721A630CC9A2E9E73E /* Pods-DreamJobUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJobUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJobUITests/Pods-DreamJobUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57EC281028C2B2F0703AF95E /* Pods_DreamJobUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A480F1197E0E4A962F32D6A /* Pods_DreamJobTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +123,7 @@
 			children = (
 				996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */,
 				E592F2E3B5BD1ABEA87EFE4A /* Pods_DreamJobUITests.framework */,
+				5837D059D71DE2E906604E80 /* Pods_DreamJobTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,8 +133,8 @@
 			children = (
 				F8CCDE62A9753A5C3B761F76 /* Pods-DreamJob.debug.xcconfig */,
 				B2F7CE9818CB29BC37E4E03B /* Pods-DreamJob.release.xcconfig */,
-				001D0537F498E3EC5EA088FF /* Pods-DreamJobUITests.debug.xcconfig */,
-				FF6FBD721A630CC9A2E9E73E /* Pods-DreamJobUITests.release.xcconfig */,
+				CC18809B7FA18A159E5F71CB /* Pods-DreamJobTests.debug.xcconfig */,
+				0106ABFF0EBAF2832867C3F9 /* Pods-DreamJobTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -402,6 +403,7 @@
 				5220A7AD2219E90200757250 /* LaunchScreen.storyboard */,
 				5220A7B02219E90200757250 /* Info.plist */,
 				5220A7A82219E8FE00757250 /* DreamJob.xcdatamodeld */,
+				52E469812220893200EBD838 /* DreamJobTests-Bridging-Header.h */,
 			);
 			path = DreamJob;
 			sourceTree = "<group>";
@@ -498,11 +500,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5220A7C12219E90300757250 /* Build configuration list for PBXNativeTarget "DreamJobUITests" */;
 			buildPhases = (
-				3A4E2AFBFCB3B1AF8D22621F /* [CP] Check Pods Manifest.lock */,
 				5220A7B12219E90300757250 /* Sources */,
 				5220A7B22219E90300757250 /* Frameworks */,
 				5220A7B32219E90300757250 /* Resources */,
-				7EB889525498D6F97DCA75EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -518,9 +518,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52E46975222087DE00EBD838 /* Build configuration list for PBXNativeTarget "DreamJobTests" */;
 			buildPhases = (
+				AA9B1CB49B2918AA0D726459 /* [CP] Check Pods Manifest.lock */,
 				52E4696A222087DE00EBD838 /* Sources */,
 				52E4696B222087DE00EBD838 /* Frameworks */,
 				52E4696C222087DE00EBD838 /* Resources */,
+				5159806E9F7FBC998F903295 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -551,6 +553,7 @@
 					};
 					52E4696D222087DE00EBD838 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 5220A79D2219E8FE00757250;
 					};
 				};
@@ -631,7 +634,37 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3A4E2AFBFCB3B1AF8D22621F /* [CP] Check Pods Manifest.lock */ = {
+		5159806E9F7FBC998F903295 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DreamJobTests/Pods-DreamJobTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamJobTests/Pods-DreamJobTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA9B1CB49B2918AA0D726459 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -646,39 +679,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DreamJobUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DreamJobTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7EB889525498D6F97DCA75EA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DreamJobUITests/Pods-DreamJobUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamJobUITests/Pods-DreamJobUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B1E9748F5342EEDF40E40A84 /* [CP] Embed Pods Frameworks */ = {
@@ -939,7 +944,6 @@
 		};
 		5220A7C22219E90300757250 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 001D0537F498E3EC5EA088FF /* Pods-DreamJobUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -960,7 +964,6 @@
 		};
 		5220A7C32219E90300757250 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF6FBD721A630CC9A2E9E73E /* Pods-DreamJobUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -981,8 +984,10 @@
 		};
 		52E46976222087DE00EBD838 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC18809B7FA18A159E5F71CB /* Pods-DreamJobTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8HFXRRGLT;
 				INFOPLIST_FILE = DreamJobTests/Info.plist;
@@ -993,6 +998,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tungvoduc.DreamJobTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DreamJob/DreamJobTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamJob.app/DreamJob";
@@ -1001,8 +1008,10 @@
 		};
 		52E46977222087DE00EBD838 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0106ABFF0EBAF2832867C3F9 /* Pods-DreamJobTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8HFXRRGLT;
 				INFOPLIST_FILE = DreamJobTests/Info.plist;
@@ -1013,6 +1022,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tungvoduc.DreamJobTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DreamJob/DreamJobTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamJob.app/DreamJob";
