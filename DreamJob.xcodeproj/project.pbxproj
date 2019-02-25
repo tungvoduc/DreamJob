@@ -37,6 +37,7 @@
 		52E4698B2222B5E300EBD838 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4698A2222B5E300EBD838 /* ProfileManager.swift */; };
 		52E4698E2222B82100EBD838 /* MockProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4698D2222B82100EBD838 /* MockProfileManager.swift */; };
 		52E469912222CB1600EBD838 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469902222CB1600EBD838 /* UIViewController+Helper.swift */; };
+		52E469932222D17800EBD838 /* ProfileUpdateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469922222D17800EBD838 /* ProfileUpdateCoordinator.swift */; };
 		52E469952222D36000EBD838 /* ProfileUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469942222D36000EBD838 /* ProfileUpdateViewModel.swift */; };
 		52E4699822231E7500EBD838 /* ProfileUpdateViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4699722231E7500EBD838 /* ProfileUpdateViewControllerTests.swift */; };
 		FDBBC5A155D1C6BA1CAC1879 /* Pods_DreamJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */; };
@@ -97,6 +98,7 @@
 		52E4698A2222B5E300EBD838 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		52E4698D2222B82100EBD838 /* MockProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfileManager.swift; sourceTree = "<group>"; };
 		52E469902222CB1600EBD838 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
+		52E469922222D17800EBD838 /* ProfileUpdateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateCoordinator.swift; sourceTree = "<group>"; };
 		52E469942222D36000EBD838 /* ProfileUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewModel.swift; sourceTree = "<group>"; };
 		52E4699722231E7500EBD838 /* ProfileUpdateViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewControllerTests.swift; sourceTree = "<group>"; };
 		5837D059D71DE2E906604E80 /* Pods_DreamJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +218,7 @@
 		5216791C221DF82A009DD2A1 /* ProfileUpdateCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				52E469922222D17800EBD838 /* ProfileUpdateCoordinator.swift */,
 			);
 			path = ProfileUpdateCoordinator;
 			sourceTree = "<group>";
@@ -803,6 +806,7 @@
 				52167931221E05EB009DD2A1 /* JobListViewController.swift in Sources */,
 				52E469852222A5BB00EBD838 /* AppCoordinator.swift in Sources */,
 				52E4696322207A7600EBD838 /* Router.swift in Sources */,
+				52E469932222D17800EBD838 /* ProfileUpdateCoordinator.swift in Sources */,
 				5220A7A22219E8FE00757250 /* AppDelegate.swift in Sources */,
 				5216793D221E0617009DD2A1 /* JobDetailViewController.swift in Sources */,
 				52167941221E0623009DD2A1 /* ProfileViewController.swift in Sources */,
