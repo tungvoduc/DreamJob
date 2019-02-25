@@ -40,6 +40,8 @@
 		52E469932222D17800EBD838 /* ProfileUpdateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469922222D17800EBD838 /* ProfileUpdateCoordinator.swift */; };
 		52E469952222D36000EBD838 /* ProfileUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469942222D36000EBD838 /* ProfileUpdateViewModel.swift */; };
 		52E4699822231E7500EBD838 /* ProfileUpdateViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4699722231E7500EBD838 /* ProfileUpdateViewControllerTests.swift */; };
+		52E469AB22249D7100EBD838 /* Profile+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469AA22249D7100EBD838 /* Profile+Rx.swift */; };
+		52E469B12224A31100EBD838 /* ProfileRxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469B02224A31100EBD838 /* ProfileRxTests.swift */; };
 		FDBBC5A155D1C6BA1CAC1879 /* Pods_DreamJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,8 @@
 		52E469922222D17800EBD838 /* ProfileUpdateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateCoordinator.swift; sourceTree = "<group>"; };
 		52E469942222D36000EBD838 /* ProfileUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewModel.swift; sourceTree = "<group>"; };
 		52E4699722231E7500EBD838 /* ProfileUpdateViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewControllerTests.swift; sourceTree = "<group>"; };
+		52E469AA22249D7100EBD838 /* Profile+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Rx.swift"; sourceTree = "<group>"; };
+		52E469B02224A31100EBD838 /* ProfileRxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRxTests.swift; sourceTree = "<group>"; };
 		5837D059D71DE2E906604E80 /* Pods_DreamJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F7CE9818CB29BC37E4E03B /* Pods-DreamJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamJob.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamJob/Pods-DreamJob.release.xcconfig"; sourceTree = "<group>"; };
@@ -413,6 +417,7 @@
 		5220A7A02219E8FE00757250 /* DreamJob */ = {
 			isa = PBXGroup;
 			children = (
+				52E469A722249D5200EBD838 /* Extensions */,
 				5216792D221E050B009DD2A1 /* Services */,
 				52167945221E0679009DD2A1 /* Routers */,
 				5216792C221E0504009DD2A1 /* Helpers */,
@@ -443,6 +448,7 @@
 		52E4696F222087DE00EBD838 /* DreamJobTests */ = {
 			isa = PBXGroup;
 			children = (
+				52E469AD2224A2EC00EBD838 /* Extensions */,
 				52E4697D2220881C00EBD838 /* Services */,
 				52E4697C2220881600EBD838 /* Routers */,
 				52E4697B2220881000EBD838 /* Helpers */,
@@ -546,6 +552,54 @@
 				52E4699722231E7500EBD838 /* ProfileUpdateViewControllerTests.swift */,
 			);
 			path = ProfileUpdateViewController;
+			sourceTree = "<group>";
+		};
+		52E469A722249D5200EBD838 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52E469A822249D5C00EBD838 /* Rx */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52E469A822249D5C00EBD838 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				52E469A922249D6100EBD838 /* Models */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		52E469A922249D6100EBD838 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E469AA22249D7100EBD838 /* Profile+Rx.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52E469AD2224A2EC00EBD838 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52E469AE2224A2F200EBD838 /* Rx */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52E469AE2224A2F200EBD838 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				52E469AF2224A2F500EBD838 /* Models */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		52E469AF2224A2F500EBD838 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E469B02224A31100EBD838 /* ProfileRxTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -812,6 +866,7 @@
 				52167941221E0623009DD2A1 /* ProfileViewController.swift in Sources */,
 				5220A7AA2219E8FE00757250 /* DreamJob.xcdatamodeld in Sources */,
 				52E4696122207A5600EBD838 /* Presentable.swift in Sources */,
+				52E469AB22249D7100EBD838 /* Profile+Rx.swift in Sources */,
 				52167935221E05FD009DD2A1 /* CourseListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,6 +887,7 @@
 				52E469832220893200EBD838 /* AppCoordinatorTests.swift in Sources */,
 				52E469882222AD3100EBD838 /* MockCoreDataStack.swift in Sources */,
 				52E4699822231E7500EBD838 /* ProfileUpdateViewControllerTests.swift in Sources */,
+				52E469B12224A31100EBD838 /* ProfileRxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
