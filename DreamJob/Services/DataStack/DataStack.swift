@@ -59,6 +59,10 @@ class DataStack: CoreDataStack {
         persistentContainer.viewContext.delete(object)
     }
     
+    func deleteObjects(_ objects: [NSManagedObject]) {
+        objects.forEach { persistentContainer.viewContext.delete($0) }
+    }
+    
     func allRecords<Type>(ofType type: Type.Type) -> [Type] where Type : NSManagedObject {
         let request = fetchRequest(ofType: type)
         
