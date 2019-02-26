@@ -32,7 +32,7 @@ final class AppCoordinator: BaseCoordinator {
             return ProfileViewController.fromNib()
         }
         
-        return ProfileUpdateViewController.fromNib()
+        return ProfileUpdateViewController(viewModel: ProfileUpdateViewModel())
     }
     
 }
