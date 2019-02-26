@@ -19,6 +19,8 @@
 		52167941221E0623009DD2A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216793F221E0623009DD2A1 /* ProfileViewController.swift */; };
 		52167942221E0623009DD2A1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52167940221E0623009DD2A1 /* ProfileViewController.xib */; };
 		52167947221E0887009DD2A1 /* DataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52167946221E0887009DD2A1 /* DataStack.swift */; };
+		521A62642225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A62632225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift */; };
+		521A62682225D53D003BE6D5 /* DataStack+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A62672225D53D003BE6D5 /* DataStack+Helpers.swift */; };
 		5220A7A22219E8FE00757250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220A7A12219E8FE00757250 /* AppDelegate.swift */; };
 		5220A7A42219E8FE00757250 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220A7A32219E8FE00757250 /* ViewController.swift */; };
 		5220A7A72219E8FE00757250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5220A7A52219E8FE00757250 /* Main.storyboard */; };
@@ -40,6 +42,7 @@
 		52E469932222D17800EBD838 /* ProfileUpdateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469922222D17800EBD838 /* ProfileUpdateCoordinator.swift */; };
 		52E469952222D36000EBD838 /* ProfileUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469942222D36000EBD838 /* ProfileUpdateViewModel.swift */; };
 		52E4699822231E7500EBD838 /* ProfileUpdateViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4699722231E7500EBD838 /* ProfileUpdateViewControllerTests.swift */; };
+		52E469A62224947B00EBD838 /* BasicProfileInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469A52224947B00EBD838 /* BasicProfileInfoViewModel.swift */; };
 		52E469AB22249D7100EBD838 /* Profile+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469AA22249D7100EBD838 /* Profile+Rx.swift */; };
 		52E469B12224A31100EBD838 /* ProfileRxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E469B02224A31100EBD838 /* ProfileRxTests.swift */; };
 		FDBBC5A155D1C6BA1CAC1879 /* Pods_DreamJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996FC91286D006AE7A2077EE /* Pods_DreamJob.framework */; };
@@ -75,6 +78,8 @@
 		5216793F221E0623009DD2A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		52167940221E0623009DD2A1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		52167946221E0887009DD2A1 /* DataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStack.swift; sourceTree = "<group>"; };
+		521A62632225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileInfoViewModelTests.swift; sourceTree = "<group>"; };
+		521A62672225D53D003BE6D5 /* DataStack+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStack+Helpers.swift"; sourceTree = "<group>"; };
 		5220A79E2219E8FE00757250 /* DreamJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5220A7A12219E8FE00757250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5220A7A32219E8FE00757250 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +108,7 @@
 		52E469922222D17800EBD838 /* ProfileUpdateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateCoordinator.swift; sourceTree = "<group>"; };
 		52E469942222D36000EBD838 /* ProfileUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewModel.swift; sourceTree = "<group>"; };
 		52E4699722231E7500EBD838 /* ProfileUpdateViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewControllerTests.swift; sourceTree = "<group>"; };
+		52E469A52224947B00EBD838 /* BasicProfileInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileInfoViewModel.swift; sourceTree = "<group>"; };
 		52E469AA22249D7100EBD838 /* Profile+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Rx.swift"; sourceTree = "<group>"; };
 		52E469B02224A31100EBD838 /* ProfileRxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRxTests.swift; sourceTree = "<group>"; };
 		5837D059D71DE2E906604E80 /* Pods_DreamJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +192,7 @@
 		52167919221DF7DD009DD2A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				52E469A42224945300EBD838 /* BasicProfileInfoViewModel */,
 				5216792A221E04ED009DD2A1 /* ProfileViewModel */,
 				52167927221DF996009DD2A1 /* JobDetailViewModel */,
 				52167924221DF966009DD2A1 /* CourseDetailViewModel */,
@@ -392,6 +399,22 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
+		521A62652225D517003BE6D5 /* TestHelper */ = {
+			isa = PBXGroup;
+			children = (
+				521A62662225D520003BE6D5 /* CoreDataObjects */,
+			);
+			path = TestHelper;
+			sourceTree = "<group>";
+		};
+		521A62662225D520003BE6D5 /* CoreDataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				521A62672225D53D003BE6D5 /* DataStack+Helpers.swift */,
+			);
+			path = CoreDataObjects;
+			sourceTree = "<group>";
+		};
 		5220A7952219E8FE00757250 = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +471,7 @@
 		52E4696F222087DE00EBD838 /* DreamJobTests */ = {
 			isa = PBXGroup;
 			children = (
+				521A62652225D517003BE6D5 /* TestHelper */,
 				52E469AD2224A2EC00EBD838 /* Extensions */,
 				52E4697D2220881C00EBD838 /* Services */,
 				52E4697C2220881600EBD838 /* Routers */,
@@ -471,6 +495,7 @@
 		52E469792220880500EBD838 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				521A62632225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -552,6 +577,14 @@
 				52E4699722231E7500EBD838 /* ProfileUpdateViewControllerTests.swift */,
 			);
 			path = ProfileUpdateViewController;
+			sourceTree = "<group>";
+		};
+		52E469A42224945300EBD838 /* BasicProfileInfoViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52E469A52224947B00EBD838 /* BasicProfileInfoViewModel.swift */,
+			);
+			path = BasicProfileInfoViewModel;
 			sourceTree = "<group>";
 		};
 		52E469A722249D5200EBD838 /* Extensions */ = {
@@ -853,6 +886,7 @@
 				52E469952222D36000EBD838 /* ProfileUpdateViewModel.swift in Sources */,
 				52167947221E0887009DD2A1 /* DataStack.swift in Sources */,
 				52E4698B2222B5E300EBD838 /* ProfileManager.swift in Sources */,
+				52E469A62224947B00EBD838 /* BasicProfileInfoViewModel.swift in Sources */,
 				52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */,
 				5220A7A42219E8FE00757250 /* ViewController.swift in Sources */,
 				52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */,
@@ -888,6 +922,8 @@
 				52E469882222AD3100EBD838 /* MockCoreDataStack.swift in Sources */,
 				52E4699822231E7500EBD838 /* ProfileUpdateViewControllerTests.swift in Sources */,
 				52E469B12224A31100EBD838 /* ProfileRxTests.swift in Sources */,
+				521A62642225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift in Sources */,
+				521A62682225D53D003BE6D5 /* DataStack+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
