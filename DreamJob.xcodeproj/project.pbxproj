@@ -21,6 +21,8 @@
 		52167947221E0887009DD2A1 /* DataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52167946221E0887009DD2A1 /* DataStack.swift */; };
 		521A62642225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A62632225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift */; };
 		521A62682225D53D003BE6D5 /* DataStack+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A62672225D53D003BE6D5 /* DataStack+Helpers.swift */; };
+		521A626B2225E24D003BE6D5 /* CourseCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A626A2225E24D003BE6D5 /* CourseCollectionViewCellViewModel.swift */; };
+		521A626D2225E716003BE6D5 /* CourseCollectionViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A626C2225E716003BE6D5 /* CourseCollectionViewCellViewModelTests.swift */; };
 		5220A7A22219E8FE00757250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220A7A12219E8FE00757250 /* AppDelegate.swift */; };
 		5220A7A42219E8FE00757250 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220A7A32219E8FE00757250 /* ViewController.swift */; };
 		5220A7A72219E8FE00757250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5220A7A52219E8FE00757250 /* Main.storyboard */; };
@@ -80,6 +82,8 @@
 		52167946221E0887009DD2A1 /* DataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStack.swift; sourceTree = "<group>"; };
 		521A62632225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileInfoViewModelTests.swift; sourceTree = "<group>"; };
 		521A62672225D53D003BE6D5 /* DataStack+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStack+Helpers.swift"; sourceTree = "<group>"; };
+		521A626A2225E24D003BE6D5 /* CourseCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		521A626C2225E716003BE6D5 /* CourseCollectionViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		5220A79E2219E8FE00757250 /* DreamJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5220A7A12219E8FE00757250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5220A7A32219E8FE00757250 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 		52167919221DF7DD009DD2A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				521A62692225E239003BE6D5 /* CourseCollectionViewCellViewModel */,
 				52E469A42224945300EBD838 /* BasicProfileInfoViewModel */,
 				5216792A221E04ED009DD2A1 /* ProfileViewModel */,
 				52167927221DF996009DD2A1 /* JobDetailViewModel */,
@@ -415,6 +420,14 @@
 			path = CoreDataObjects;
 			sourceTree = "<group>";
 		};
+		521A62692225E239003BE6D5 /* CourseCollectionViewCellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				521A626A2225E24D003BE6D5 /* CourseCollectionViewCellViewModel.swift */,
+			);
+			path = CourseCollectionViewCellViewModel;
+			sourceTree = "<group>";
+		};
 		5220A7952219E8FE00757250 = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				521A62632225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift */,
+				521A626C2225E716003BE6D5 /* CourseCollectionViewCellViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -889,6 +903,7 @@
 				52E469A62224947B00EBD838 /* BasicProfileInfoViewModel.swift in Sources */,
 				52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */,
 				5220A7A42219E8FE00757250 /* ViewController.swift in Sources */,
+				521A626B2225E24D003BE6D5 /* CourseCollectionViewCellViewModel.swift in Sources */,
 				52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */,
 				52167917221DF7CE009DD2A1 /* ProfileUpdateViewController.swift in Sources */,
 				52167931221E05EB009DD2A1 /* JobListViewController.swift in Sources */,
@@ -923,6 +938,7 @@
 				52E4699822231E7500EBD838 /* ProfileUpdateViewControllerTests.swift in Sources */,
 				52E469B12224A31100EBD838 /* ProfileRxTests.swift in Sources */,
 				521A62642225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift in Sources */,
+				521A626D2225E716003BE6D5 /* CourseCollectionViewCellViewModelTests.swift in Sources */,
 				521A62682225D53D003BE6D5 /* DataStack+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
