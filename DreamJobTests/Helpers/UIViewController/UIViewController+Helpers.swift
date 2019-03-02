@@ -6,4 +6,14 @@
 //  Copyright © 2019 Vo Tung. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController {
+    
+    func makeVisible() {
+        let window = UIWindow()
+        window.rootViewController = self
+        window.makeKeyAndVisible()
+    }
+    
+}

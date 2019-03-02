@@ -35,6 +35,9 @@
 		52D860F7222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860F5222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift */; };
 		52D860F8222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860F6222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.xib */; };
 		52D860FB222B082E00F93D54 /* BasicProfileInfoCollectionReusableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860FA222B082E00F93D54 /* BasicProfileInfoCollectionReusableViewTests.swift */; };
+		52D860FF222B352000F93D54 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860FD222B352000F93D54 /* CourseCollectionViewCell.swift */; };
+		52D86100222B352000F93D54 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860FE222B352000F93D54 /* CourseCollectionViewCell.xib */; };
+		52D86103222B35B700F93D54 /* CourseCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86102222B35B700F93D54 /* CourseCollectionViewCellTests.swift */; };
 		52E4696122207A5600EBD838 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696022207A5600EBD838 /* Presentable.swift */; };
 		52E4696322207A7600EBD838 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696222207A7600EBD838 /* Router.swift */; };
 		52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696422207BD900EBD838 /* BaseCoordinator.swift */; };
@@ -106,6 +109,9 @@
 		52D860F5222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileInfoCollectionReusableView.swift; sourceTree = "<group>"; };
 		52D860F6222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicProfileInfoCollectionReusableView.xib; sourceTree = "<group>"; };
 		52D860FA222B082E00F93D54 /* BasicProfileInfoCollectionReusableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileInfoCollectionReusableViewTests.swift; sourceTree = "<group>"; };
+		52D860FD222B352000F93D54 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		52D860FE222B352000F93D54 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
+		52D86102222B35B700F93D54 /* CourseCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCellTests.swift; sourceTree = "<group>"; };
 		52E4696022207A5600EBD838 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		52E4696222207A7600EBD838 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		52E4696422207BD900EBD838 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -346,6 +352,7 @@
 		52167929221E04E5009DD2A1 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
+				52D860FC222B350700F93D54 /* CourseCollectionViewCell */,
 				52D860F4222ACCA100F93D54 /* BasicProfileInfoCollectionReusableView */,
 				52D860D32228A71900F93D54 /* ProfileViewController.swift */,
 				52D860D42228A71900F93D54 /* ProfileViewController.xib */,
@@ -498,6 +505,7 @@
 		52D860D72228A73D00F93D54 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
+				52D86101222B35AB00F93D54 /* CourseCollectionViewCell */,
 				52D860F9222B081E00F93D54 /* BasicProfileInfoCollectionReusableView */,
 			);
 			path = ProfileViewController;
@@ -526,6 +534,23 @@
 				52D860FA222B082E00F93D54 /* BasicProfileInfoCollectionReusableViewTests.swift */,
 			);
 			path = BasicProfileInfoCollectionReusableView;
+			sourceTree = "<group>";
+		};
+		52D860FC222B350700F93D54 /* CourseCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				52D860FD222B352000F93D54 /* CourseCollectionViewCell.swift */,
+				52D860FE222B352000F93D54 /* CourseCollectionViewCell.xib */,
+			);
+			path = CourseCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		52D86101222B35AB00F93D54 /* CourseCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				52D86102222B35B700F93D54 /* CourseCollectionViewCellTests.swift */,
+			);
+			path = CourseCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		52E4696F222087DE00EBD838 /* DreamJobTests */ = {
@@ -814,6 +839,7 @@
 				5216793E221E0617009DD2A1 /* JobDetailViewController.xib in Resources */,
 				5220A7AC2219E90200757250 /* Assets.xcassets in Resources */,
 				52E469692220805C00EBD838 /* CourseDetailViewController.xib in Resources */,
+				52D86100222B352000F93D54 /* CourseCollectionViewCell.xib in Resources */,
 				5220A7A72219E8FE00757250 /* Main.storyboard in Resources */,
 				52167918221DF7CE009DD2A1 /* ProfileUpdateViewController.xib in Resources */,
 				52167932221E05EB009DD2A1 /* JobListViewController.xib in Resources */,
@@ -956,6 +982,7 @@
 				52D860F7222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift in Sources */,
 				52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */,
 				52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */,
+				52D860FF222B352000F93D54 /* CourseCollectionViewCell.swift in Sources */,
 				5220A7A42219E8FE00757250 /* ViewController.swift in Sources */,
 				521A626B2225E24D003BE6D5 /* CourseCollectionViewCellViewModel.swift in Sources */,
 				52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */,
@@ -992,6 +1019,7 @@
 				52E4699822231E7500EBD838 /* ProfileUpdateViewControllerTests.swift in Sources */,
 				52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */,
 				52E469B12224A31100EBD838 /* ProfileRxTests.swift in Sources */,
+				52D86103222B35B700F93D54 /* CourseCollectionViewCellTests.swift in Sources */,
 				521A62642225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift in Sources */,
 				52D860F3222AC9E900F93D54 /* UIViewController+Helpers.swift in Sources */,
 				521A626D2225E716003BE6D5 /* CourseCollectionViewCellViewModelTests.swift in Sources */,
