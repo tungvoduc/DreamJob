@@ -28,8 +28,8 @@ final class AppCoordinator: BaseCoordinator {
     }
     
     func currentViewController() -> UIViewController {
-        if profileManager.hasProfile() {
-            return ProfileViewController.fromNib()
+        if let currentProfile = profileManager.currentProfile() {
+            return ProfileViewController(viewModel: ProfileViewModel(profile: currentProfile))
         }
         
         return ProfileUpdateViewController(viewModel: ProfileUpdateViewModel())

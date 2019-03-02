@@ -36,7 +36,7 @@ class AppCoordinatorTests: XCTestCase {
         profileManager.profile = nil
         expect(self.sut.currentViewController() is ProfileUpdateViewController).to(equal(true))
         
-        profileManager.profile = Profile()
+        profileManager.profile = DataStack().createObject(ofType: Profile.self)
         expect(self.sut.currentViewController() is ProfileViewController).to(equal(true))
     }
 
