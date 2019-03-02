@@ -21,6 +21,7 @@ final class AppCoordinator: BaseCoordinator {
         super.init(router: router)
         containerController.show(currentViewController(), animated: false, completion: nil)
         window.rootViewController = containerController
+        window.makeKeyAndVisible()
     }
     
     override func toPresentable() -> UIViewController {
