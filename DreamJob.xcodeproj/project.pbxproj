@@ -31,6 +31,7 @@
 		52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */; };
 		52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D32228A71900F93D54 /* ProfileViewController.swift */; };
 		52D860D62228A71900F93D54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860D42228A71900F93D54 /* ProfileViewController.xib */; };
+		52D860F3222AC9E900F93D54 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860F2222AC9E900F93D54 /* UIViewController+Helpers.swift */; };
 		52E4696122207A5600EBD838 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696022207A5600EBD838 /* Presentable.swift */; };
 		52E4696322207A7600EBD838 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696222207A7600EBD838 /* Router.swift */; };
 		52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696422207BD900EBD838 /* BaseCoordinator.swift */; };
@@ -98,6 +99,7 @@
 		52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		52D860D32228A71900F93D54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		52D860D42228A71900F93D54 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		52D860F2222AC9E900F93D54 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
 		52E4696022207A5600EBD838 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		52E4696222207A7600EBD838 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		52E4696422207BD900EBD838 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -486,6 +488,14 @@
 			path = DreamJobUITests;
 			sourceTree = "<group>";
 		};
+		52D860F1222AC9D900F93D54 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52D860F2222AC9E900F93D54 /* UIViewController+Helpers.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		52E4696F222087DE00EBD838 /* DreamJobTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +542,7 @@
 		52E4697B2220881000EBD838 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				52D860F1222AC9D900F93D54 /* UIViewController */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -947,6 +958,7 @@
 				52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */,
 				52E469B12224A31100EBD838 /* ProfileRxTests.swift in Sources */,
 				521A62642225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift in Sources */,
+				52D860F3222AC9E900F93D54 /* UIViewController+Helpers.swift in Sources */,
 				521A626D2225E716003BE6D5 /* CourseCollectionViewCellViewModelTests.swift in Sources */,
 				521A62682225D53D003BE6D5 /* DataStack+Helpers.swift in Sources */,
 			);
