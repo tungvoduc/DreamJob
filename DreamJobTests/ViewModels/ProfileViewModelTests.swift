@@ -33,6 +33,8 @@ class ProfileViewModelTests: XCTestCase {
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        dataStack.deleteObject(profile)
+        dataStack.deleteAllRecords(ofType: Course.self)
     }
     
     // Test completedCourses are properly updated after profile's completedCourses is updated
@@ -47,11 +49,14 @@ class ProfileViewModelTests: XCTestCase {
         set1.insert(course3)
         
         profile.completedCourses = set1 as NSSet
-        expect(try self.sut.completedCourses.toBlocking().first()) == [
+        
+        if let courses = try sut.completedCourses.toBlocking().first() as? [CourseCollectionViewCellViewModel] {
+            expect(courses) == [
                 CourseCollectionViewCellViewModel(course: course1),
                 CourseCollectionViewCellViewModel(course: course2),
-                CourseCollectionViewCellViewModel(course: course3)
-            ]
+                CourseCollectionViewCellViewModel(course: course3)]
+        }
+        
         
         let course4 = dataStack.createCourse(id: "2222", code: "DDD", numberOfCredits: 5, name: "Course 4")
         let course5 = dataStack.createCourse(id: "1111", code: "EEE", numberOfCredits: 15, name: "Course 5")
@@ -59,10 +64,13 @@ class ProfileViewModelTests: XCTestCase {
         set2.insert(course4)
         set2.insert(course5)
         profile.completedCourses = set2 as NSSet
-        expect(try self.sut.completedCourses.toBlocking().first()) == [
-            CourseCollectionViewCellViewModel(course: course4),
-            CourseCollectionViewCellViewModel(course: course5)
-        ]
+        
+        if let courses = try sut.completedCourses.toBlocking().first() as? [CourseCollectionViewCellViewModel] {
+            expect(courses) == [
+                CourseCollectionViewCellViewModel(course: course4),
+                CourseCollectionViewCellViewModel(course: course5)
+            ]
+        }
     }
 
 }

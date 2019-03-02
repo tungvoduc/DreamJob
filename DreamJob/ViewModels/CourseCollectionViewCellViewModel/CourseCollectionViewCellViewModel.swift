@@ -12,13 +12,13 @@ protocol CourseBasedViewModelType {
     init(course: Course)
 }
 
-protocol CourseCollectionViewCellViewModelType: CourseBasedViewModelType, Equatable {
+protocol CourseCollectionViewCellViewModelType: CourseBasedViewModelType {
     var name: String { get }
     var creditNumberString: String { get }
     var skillString: String { get }
 }
 
-struct CourseCollectionViewCellViewModel: CourseCollectionViewCellViewModelType {
+struct CourseCollectionViewCellViewModel: CourseCollectionViewCellViewModelType, Equatable {
     
     var name: String
     

@@ -13,7 +13,7 @@ import RxCocoa
 // MARK: ProfileViewModelType
 protocol ProfileViewModelType: ProfileBasedViewModelType {
     var basicProfileInfo: BasicProfileInfoViewModelType { get }
-    var completedCourses: Observable<[CourseCollectionViewCellViewModel]> { get }
+    var completedCourses: Observable<[CourseCollectionViewCellViewModelType]> { get }
 }
 
 // MARK: ProfileViewModel
@@ -21,7 +21,7 @@ class ProfileViewModel: ProfileViewModelType {
     
     var basicProfileInfo: BasicProfileInfoViewModelType
     
-    var completedCourses: Observable<[CourseCollectionViewCellViewModel]>
+    var completedCourses: Observable<[CourseCollectionViewCellViewModelType]>
     
     required init(profile: Profile) {
         basicProfileInfo = BasicProfileInfoViewModel(profile: profile)
