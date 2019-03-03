@@ -36,6 +36,7 @@ class ProfileManager: ProfileManaging {
         profile.firstName = firstName
         profile.dateOfBirth = dateOfBirth
         profile.socialSecurityNumber = socialSecurityNumber
+        coreDataStack.saveContext()
         return profile
     }
     
