@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import DatePicker
 
 class ProfileUpdateViewController: UIViewController {
     
@@ -43,6 +44,9 @@ class ProfileUpdateViewController: UIViewController {
     
     private func setUpUIElements() {
         submitButton.isEnabled = false
+        submitButton.setBackgroundImage(UIImage.imageWithColor(UIColor.blue, size: CGSize(width: 1, height: 1)), for: .normal)
+        submitButton.setBackgroundImage(UIImage.imageWithColor(UIColor.lightGray, size: CGSize(width: 1, height: 1)), for: .disabled)
+        birthdateTextField.delegate = self
     }
     
     private func setUpBindings() {
@@ -84,9 +88,35 @@ class ProfileUpdateViewController: UIViewController {
             .bind(to: submitButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
+        viewModel.isSubmitButtonEnabled.subscribe(onNext: {[weak self] isEnabled in
+            self?.submitButton.isEnabled = isEnabled
+        })
+        
         submitButton.rx.tap
             .bind(to: viewModel.submitButtonTapped)
             .disposed(by: disposeBag)
     }
 
+    private func showBirthdateDatePicker() {
+        let minDate = DatePickerHelper.shared.dateFrom(day: 1, month: 1, year: 1930)!
+        let maxDate = DatePickerHelper.shared.dateFrom(day: 31, month: 12, year: 2010)!
+        
+        let datePicker = DatePicker()
+        datePicker.setup(min: minDate, max: maxDate) {(selected, date) in
+            if selected, let selectedDate = date {
+                self.viewModel.updateBirthdate.onNext(selectedDate)
+            } else {
+                print("cancelled")
+            }
+        }
+        datePicker.display(in: self)
+    }
+    
+}
+
+extension ProfileUpdateViewController: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        showBirthdateDatePicker()
+        return false
+    }
 }
