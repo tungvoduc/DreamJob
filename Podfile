@@ -9,7 +9,9 @@ target 'DreamJob' do
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'DTContainerController'
-
+  pod 'DatePicker', '1.0.0'
+  pod 'RxDataSources', '~> 3.0'
+  
   target 'DreamJobTests' do
     inherit! :search_paths
     # Pods for testing
