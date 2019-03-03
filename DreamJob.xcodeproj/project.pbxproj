@@ -31,6 +31,7 @@
 		52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */; };
 		52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D32228A71900F93D54 /* ProfileViewController.swift */; };
 		52D860D62228A71900F93D54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860D42228A71900F93D54 /* ProfileViewController.xib */; };
+		52D860D92228A74F00F93D54 /* ProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D82228A74F00F93D54 /* ProfileViewControllerTests.swift */; };
 		52D860F3222AC9E900F93D54 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860F2222AC9E900F93D54 /* UIViewController+Helpers.swift */; };
 		52D860F7222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860F5222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift */; };
 		52D860F8222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860F6222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.xib */; };
@@ -106,6 +107,7 @@
 		52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		52D860D32228A71900F93D54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		52D860D42228A71900F93D54 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		52D860D82228A74F00F93D54 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
 		52D860F2222AC9E900F93D54 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
 		52D860F5222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileInfoCollectionReusableView.swift; sourceTree = "<group>"; };
 		52D860F6222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicProfileInfoCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 			children = (
 				52D86101222B35AB00F93D54 /* CourseCollectionViewCell */,
 				52D860F9222B081E00F93D54 /* BasicProfileInfoCollectionReusableView */,
+				52D860D82228A74F00F93D54 /* ProfileViewControllerTests.swift */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 				52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */,
 				52E469B12224A31100EBD838 /* ProfileRxTests.swift in Sources */,
 				52D86103222B35B700F93D54 /* CourseCollectionViewCellTests.swift in Sources */,
+				52D860D92228A74F00F93D54 /* ProfileViewControllerTests.swift in Sources */,
 				521A62642225CFB1003BE6D5 /* BasicProfileInfoViewModelTests.swift in Sources */,
 				52D860F3222AC9E900F93D54 /* UIViewController+Helpers.swift in Sources */,
 				521A626D2225E716003BE6D5 /* CourseCollectionViewCellViewModelTests.swift in Sources */,
