@@ -39,6 +39,7 @@
 		52D860FF222B352000F93D54 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860FD222B352000F93D54 /* CourseCollectionViewCell.swift */; };
 		52D86100222B352000F93D54 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860FE222B352000F93D54 /* CourseCollectionViewCell.xib */; };
 		52D86103222B35B700F93D54 /* CourseCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86102222B35B700F93D54 /* CourseCollectionViewCellTests.swift */; };
+		52D86106222B4C7500F93D54 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86105222B4C7500F93D54 /* UIImage+Extensions.swift */; };
 		52D86108222BCBC600F93D54 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86107222BCBC600F93D54 /* ProfileCoordinator.swift */; };
 		52D8610B222BDC3500F93D54 /* ProfileViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8610A222BDC3500F93D54 /* ProfileViewSection.swift */; };
 		52E4696122207A5600EBD838 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696022207A5600EBD838 /* Presentable.swift */; };
@@ -116,6 +117,7 @@
 		52D860FD222B352000F93D54 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		52D860FE222B352000F93D54 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
 		52D86102222B35B700F93D54 /* CourseCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		52D86105222B4C7500F93D54 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		52D86107222BCBC600F93D54 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		52D8610A222BDC3500F93D54 /* ProfileViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewSection.swift; sourceTree = "<group>"; };
 		52E4696022207A5600EBD838 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 		52167929221E04E5009DD2A1 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
+				52D86109222BDC2200F93D54 /* DataSource */,
 				52D860FC222B350700F93D54 /* CourseCollectionViewCell */,
 				52D860F4222ACCA100F93D54 /* BasicProfileInfoCollectionReusableView */,
 				52D860D32228A71900F93D54 /* ProfileViewController.swift */,
@@ -561,6 +564,14 @@
 			path = CourseCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		52D86104222B4C6700F93D54 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				52D86105222B4C7500F93D54 /* UIImage+Extensions.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		52D86109222BDC2200F93D54 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,6 +706,7 @@
 		52E469A722249D5200EBD838 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				52D86104222B4C6700F93D54 /* UIImage */,
 				52E469A822249D5C00EBD838 /* Rx */,
 			);
 			path = Extensions;
@@ -999,6 +1011,7 @@
 			files = (
 				52E469912222CB1600EBD838 /* UIViewController+Helper.swift in Sources */,
 				52E469A322248CA600EBD838 /* ProfileViewModel.swift in Sources */,
+				52D86106222B4C7500F93D54 /* UIImage+Extensions.swift in Sources */,
 				52E469952222D36000EBD838 /* ProfileUpdateViewModel.swift in Sources */,
 				52167947221E0887009DD2A1 /* DataStack.swift in Sources */,
 				52E4698B2222B5E300EBD838 /* ProfileManager.swift in Sources */,
