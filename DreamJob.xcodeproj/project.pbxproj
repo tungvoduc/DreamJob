@@ -40,6 +40,7 @@
 		52D86100222B352000F93D54 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860FE222B352000F93D54 /* CourseCollectionViewCell.xib */; };
 		52D86103222B35B700F93D54 /* CourseCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86102222B35B700F93D54 /* CourseCollectionViewCellTests.swift */; };
 		52D86108222BCBC600F93D54 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86107222BCBC600F93D54 /* ProfileCoordinator.swift */; };
+		52D8610B222BDC3500F93D54 /* ProfileViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8610A222BDC3500F93D54 /* ProfileViewSection.swift */; };
 		52E4696122207A5600EBD838 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696022207A5600EBD838 /* Presentable.swift */; };
 		52E4696322207A7600EBD838 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696222207A7600EBD838 /* Router.swift */; };
 		52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696422207BD900EBD838 /* BaseCoordinator.swift */; };
@@ -116,6 +117,7 @@
 		52D860FE222B352000F93D54 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
 		52D86102222B35B700F93D54 /* CourseCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCellTests.swift; sourceTree = "<group>"; };
 		52D86107222BCBC600F93D54 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		52D8610A222BDC3500F93D54 /* ProfileViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewSection.swift; sourceTree = "<group>"; };
 		52E4696022207A5600EBD838 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		52E4696222207A7600EBD838 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		52E4696422207BD900EBD838 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -559,6 +561,14 @@
 			path = CourseCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		52D86109222BDC2200F93D54 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				52D8610A222BDC3500F93D54 /* ProfileViewSection.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		52E4696F222087DE00EBD838 /* DreamJobTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,6 +1005,7 @@
 				52E469A62224947B00EBD838 /* BasicProfileInfoViewModel.swift in Sources */,
 				52D860F7222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift in Sources */,
 				52D86108222BCBC600F93D54 /* ProfileCoordinator.swift in Sources */,
+				52D8610B222BDC3500F93D54 /* ProfileViewSection.swift in Sources */,
 				52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */,
 				52E469682220805C00EBD838 /* CourseDetailViewController.swift in Sources */,
 				52D860FF222B352000F93D54 /* CourseCollectionViewCell.swift in Sources */,
