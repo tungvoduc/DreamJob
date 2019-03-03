@@ -9,6 +9,7 @@
 import Foundation
 
 protocol CourseBasedViewModelType {
+    var course: Course { get }
     init(course: Course)
 }
 
@@ -26,7 +27,11 @@ struct CourseCollectionViewCellViewModel: CourseCollectionViewCellViewModelType,
     
     var skillString: String
     
+    let course: Course
+    
     init(course: Course) {
+        self.course = course
+        
         name = course.name ?? ""
         
         if course.credits == 1 {

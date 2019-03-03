@@ -14,10 +14,17 @@ import RxCocoa
 protocol ProfileViewModelType: ProfileBasedViewModelType {
     var basicProfileInfo: BasicProfileInfoViewModelType { get }
     var completedCourses: Observable<[CourseCollectionViewCellViewModelType]> { get }
+    
+    var selectCourseDetail: AnyObserver<CourseDetailViewModelType> { get }
+    var openCourseDetail: Observable<CourseDetailViewModelType> { get }
 }
 
 // MARK: ProfileViewModel
 class ProfileViewModel: ProfileViewModelType {
+    
+    var selectCourseDetail: AnyObserver<CourseDetailViewModelType>
+    
+    var openCourseDetail: Observable<CourseDetailViewModelType>
     
     var basicProfileInfo: BasicProfileInfoViewModelType
     
@@ -30,6 +37,10 @@ class ProfileViewModel: ProfileViewModelType {
                 Array($0.map { CourseCollectionViewCellViewModel(course: $0) })
                     .sorted { $0.name < $1.name }
             }
+        
+        let openCourseDetail = PublishSubject<CourseDetailViewModelType>()
+        selectCourseDetail = openCourseDetail.asObserver()
+        self.openCourseDetail = openCourseDetail.asObservable()
     }
     
 }

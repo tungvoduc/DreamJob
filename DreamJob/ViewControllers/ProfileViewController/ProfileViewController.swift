@@ -62,6 +62,11 @@ class ProfileViewController: UICollectionViewController {
             .map { [$0] }
             .bind(to: collectionView.rx.items(dataSource: sectionDataSource))
             .disposed(by: disposeBag)
+        
+        collectionView.rx.modelSelected(CourseCollectionViewCellViewModelType.self)
+            .map { CourseDetailViewModel(course: $0.course) }
+            .bind(to: viewModel.selectCourseDetail)
+            .disposed(by: disposeBag)
     }
     
 }
