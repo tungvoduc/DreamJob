@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G5019" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="credits" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="30" defaultValueString="3" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,6 +11,7 @@
     </entity>
     <entity name="Job" representedClassName="Job" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="skills" toMany="YES" deletionRule="Nullify" destinationEntity="Skill" syncable="YES"/>
     </entity>
@@ -26,11 +28,12 @@
     <entity name="Skill" representedClassName="Skill" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="skillDescription" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Course" positionX="-36" positionY="54" width="128" height="135"/>
-        <element name="Job" positionX="-18" positionY="81" width="128" height="90"/>
+        <element name="Course" positionX="-36" positionY="54" width="128" height="150"/>
+        <element name="Job" positionX="-18" positionY="81" width="128" height="105"/>
         <element name="Profile" positionX="-63" positionY="-18" width="128" height="165"/>
-        <element name="Skill" positionX="-54" positionY="45" width="128" height="75"/>
+        <element name="Skill" positionX="-54" positionY="45" width="128" height="90"/>
     </elements>
 </model>
