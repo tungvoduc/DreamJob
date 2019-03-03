@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ProfileUpdateCoordinator: BaseCoordinator {
+final class ProfileUpdateCoordinator: BaseCoordinator {
     
     var profileUpdateViewController: ProfileUpdateViewController
     
-    init(viewModel: ProfileUpdateViewModeling) {
+    init(viewModel: ProfileUpdateViewModeling = ProfileUpdateViewModel()) {
         profileUpdateViewController = ProfileUpdateViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: profileUpdateViewController)
         super.init(router: Router(navigationController: navigationController))

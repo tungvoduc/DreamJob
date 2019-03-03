@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 import DTContainerController
 
 final class AppCoordinator: BaseCoordinator {
@@ -15,11 +16,17 @@ final class AppCoordinator: BaseCoordinator {
     let profileManager: ProfileManaging
     let window: UIWindow
     
+    private(set) var childCoordinator: BaseCoordinator!
+    
+    private let disposeBag = DisposeBag()
+    
     init(window applicationWindow: UIWindow, router: RouterType = Router(navigationController: UINavigationController()), profileManager manager: ProfileManaging = ProfileManager()) {
         profileManager = manager
         window = applicationWindow
         super.init(router: router)
-        containerController.show(currentViewController(), animated: false, completion: nil)
+        
+        childCoordinator = currentCoordinator()
+        show(childCoordinator, animated: false, completion: nil)
         window.rootViewController = containerController
         window.makeKeyAndVisible()
     }
@@ -28,12 +35,25 @@ final class AppCoordinator: BaseCoordinator {
         return containerController
     }
     
-    func currentViewController() -> UIViewController {
+    func currentCoordinator() -> BaseCoordinator {
         if let currentProfile = profileManager.currentProfile() {
-            return ProfileViewController(viewModel: ProfileViewModel(profile: currentProfile))
+            return ProfileCoordinator(viewModel: ProfileViewModel(profile: currentProfile))
         }
         
-        return ProfileUpdateViewController(viewModel: ProfileUpdateViewModel())
+        let viewModel = ProfileUpdateViewModel()
+        viewModel.didSetNewProfile
+            .subscribe(onNext: {[weak self] profile in
+                let coordinator = ProfileCoordinator(viewModel: ProfileViewModel(profile: profile))
+                self?.childCoordinator = coordinator
+                self?.show(coordinator, animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
+        return ProfileUpdateCoordinator()
+    }
+    
+    func show(_ coordinator: BaseCoordinator, animated: Bool, completion: (() -> Void)?) {
+        childCoordinator = coordinator
+        containerController.show(coordinator.toPresentable(), animated: animated, completion: completion)
     }
     
 }

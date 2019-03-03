@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileCoordinator: BaseCoordinator {
+final class ProfileCoordinator: BaseCoordinator {
     
     var profileViewController: ProfileViewController
     
