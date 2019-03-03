@@ -64,7 +64,7 @@ extension Reactive where Base: Profile {
     var completedCourses: Observable<Set<Course>> {
         return observe(NSSet.self, #keyPath(Profile.completedCourses))
             .map({ set -> Set<Course> in
-                return set as! Set<Course>
+                return set as? Set<Course> ?? Set<Course>()
             })
             .share()
     }
