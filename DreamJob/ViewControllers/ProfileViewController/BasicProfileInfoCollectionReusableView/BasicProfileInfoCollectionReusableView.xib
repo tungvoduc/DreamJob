@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="BasicProfileInfoCollectionReusableView" customModule="DreamJob" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="487" height="286"/>
+            <rect key="frame" x="0.0" y="0.0" width="487" height="163"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tung Vo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tao-1q-uNa">
@@ -62,6 +62,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="OKQ-FK-4he" firstAttribute="trailing" secondItem="mIl-cf-o6j" secondAttribute="trailing" id="2Ad-Jy-Ui5"/>
                 <constraint firstItem="OKQ-FK-4he" firstAttribute="leading" secondItem="mIl-cf-o6j" secondAttribute="leading" id="9jb-1n-vSw"/>
@@ -88,7 +89,7 @@
                 <outlet property="skillNumberLabel" destination="lfT-hB-Xhz" id="Wvb-xy-4Ub"/>
                 <outlet property="studentNumberLabel" destination="fvV-Wz-0Kc" id="gr2-lI-B3P"/>
             </connections>
-            <point key="canvasLocation" x="85.599999999999994" y="98.050974512743636"/>
+            <point key="canvasLocation" x="85.599999999999994" y="42.728635682158924"/>
         </collectionReusableView>
     </objects>
 </document>
