@@ -36,14 +36,14 @@ final class AppCoordinator: BaseCoordinator {
     }
     
     func currentCoordinator() -> BaseCoordinator {
-        if let currentProfile = profileManager.currentProfile() {
-            return ProfileCoordinator(viewModel: ProfileViewModel(profile: currentProfile))
+        if let profile = profileManager.currentProfile() {
+            return TabbarCoordinator(profile: profile)
         }
         
         let viewModel = ProfileUpdateViewModel()
         viewModel.didSetNewProfile
             .subscribe(onNext: {[weak self] profile in
-                let coordinator = ProfileCoordinator(viewModel: ProfileViewModel(profile: profile))
+                let coordinator = TabbarCoordinator(profile: profile)
                 self?.childCoordinator = coordinator
                 self?.show(coordinator, animated: true, completion: nil)
             })
