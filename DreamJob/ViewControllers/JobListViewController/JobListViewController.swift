@@ -7,83 +7,81 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
 
-private let reuseIdentifier = "Cell"
+private let cellReuseIdentifier = "Cell"
 
 class JobListViewController: UICollectionViewController {
     
+    private(set) var viewModel: ProfileJobListViewModelType!
+    
+    private(set) var profile: Profile
+    
+    private(set) var dataStack: CoreDataStack
+    
+    private var disposeBag = DisposeBag()
+    
+    let sectionDataSource = RxCollectionViewSectionedReloadDataSource<JobListSection>(
+        configureCell: { dataSource, collectionView, indexPath, item in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! JobListCollectionViewCell
+            cell.populate(from: item)
+            return cell
+    })
+    
+    init(profile aProfile: Profile, dataStack stack: CoreDataStack) {
+        dataStack = stack
+        profile = aProfile
+        super.init(nibName: "JobListViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        
+        let jobs = dataStack.allRecords(ofType: Job.self)
+        viewModel = ProfileJobListViewModel(profile: profile, jobs: jobs)
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView!.register(UINib(nibName: "JobListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
+        title = "Jobs"
 
         // Do any additional setup after loading the view.
+        setUpBindings(viewModel: viewModel)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
+    private func setUpBindings(viewModel: ProfileJobListViewModelType) {
+        collectionView.dataSource = nil
+        
+        Observable.from(optional: viewModel.jobs)
+            .map { $0.map { viewModel.profileJobListCollectionViewCellViewModel(for: $0) }}
+            .map { JobListSection(items: $0) }
+            .map { [$0] }
+            .bind(to: collectionView.rx.items(dataSource: sectionDataSource))
+            .disposed(by: disposeBag)
+        
+        collectionView.rx.willDisplayCell
+        
+//        collectionView.rx.modelSelected(ProfileJobListCollectionViewCellViewModelType.self)
+//            .map { CourseDetailViewModel(course: $0.course) }
+//            .bind(to: viewModel.selectCourseDetail)
+//            .disposed(by: disposeBag)
+    }
     
-        return cell
-    }
+}
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+// MARK: UICollectionViewDelegateFlowLayout
+extension JobListViewController: UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width - 20, height: 250)
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
     
 }
