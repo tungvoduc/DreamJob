@@ -64,7 +64,7 @@ class ProfileViewController: UICollectionViewController {
             .disposed(by: disposeBag)
         
         collectionView.rx.modelSelected(CourseCollectionViewCellViewModelType.self)
-            .map { CourseDetailViewModel(course: $0.course) }
+            .map {[unowned self] in CourseDetailViewModel(course: $0.course, profile: self.viewModel.profile) }
             .bind(to: viewModel.selectCourseDetail)
             .disposed(by: disposeBag)
     }

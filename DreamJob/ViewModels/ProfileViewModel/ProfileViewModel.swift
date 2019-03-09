@@ -17,10 +17,13 @@ protocol ProfileViewModelType: ProfileBasedViewModelType {
     
     var selectCourseDetail: AnyObserver<CourseDetailViewModelType> { get }
     var openCourseDetail: Observable<CourseDetailViewModelType> { get }
+    var profile: Profile { get }
 }
 
 // MARK: ProfileViewModel
 class ProfileViewModel: ProfileViewModelType {
+    
+    var profile: Profile
     
     var selectCourseDetail: AnyObserver<CourseDetailViewModelType>
     
@@ -31,6 +34,7 @@ class ProfileViewModel: ProfileViewModelType {
     var completedCourses: Observable<[CourseCollectionViewCellViewModelType]>
     
     required init(profile: Profile) {
+        self.profile = profile
         basicProfileInfo = BasicProfileInfoViewModel(profile: profile)
         completedCourses = profile.rx.completedCourses
             .map {
