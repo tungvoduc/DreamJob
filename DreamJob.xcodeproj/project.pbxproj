@@ -30,8 +30,11 @@
 		5220A7BA2219E90300757250 /* DreamJobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220A7B92219E90300757250 /* DreamJobUITests.swift */; };
 		5230DBFA2231AF920054714A /* NSSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DBF92231AF920054714A /* NSSet.swift */; };
 		5230DBFC2231B03A0054714A /* Course+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DBFB2231B03A0054714A /* Course+Extension.swift */; };
+		5230DC0422330F2E0054714A /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC0322330F2D0054714A /* CourseListViewModel.swift */; };
+		5230DC09223312CB0054714A /* CourseListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC08223312CB0054714A /* CourseListCoordinator.swift */; };
 		5230DC0C22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC0B22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift */; };
 		5230DC0E22331FAB0054714A /* NSFetchedResultsController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC0D22331FAB0054714A /* NSFetchedResultsController+Rx.swift */; };
+		5230DC1722332B9B0054714A /* CourseListViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC1622332B9B0054714A /* CourseListViewSection.swift */; };
 		52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */; };
 		52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D32228A71900F93D54 /* ProfileViewController.swift */; };
 		52D860D62228A71900F93D54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860D42228A71900F93D54 /* ProfileViewController.xib */; };
@@ -123,8 +126,11 @@
 		5220A7BB2219E90300757250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5230DBF92231AF920054714A /* NSSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSet.swift; sourceTree = "<group>"; };
 		5230DBFB2231B03A0054714A /* Course+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Extension.swift"; sourceTree = "<group>"; };
+		5230DC0322330F2D0054714A /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
+		5230DC08223312CB0054714A /* CourseListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListCoordinator.swift; sourceTree = "<group>"; };
 		5230DC0B22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFetchedResultsControllerDelegateProxy.swift; sourceTree = "<group>"; };
 		5230DC0D22331FAB0054714A /* NSFetchedResultsController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+Rx.swift"; sourceTree = "<group>"; };
+		5230DC1622332B9B0054714A /* CourseListViewSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseListViewSection.swift; path = DreamJob/ViewControllers/CourseListViewController/DataSource/CourseListViewSection.swift; sourceTree = SOURCE_ROOT; };
 		52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		52D860D32228A71900F93D54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		52D860D42228A71900F93D54 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 		52D86118222C1DEB00F93D54 /* JobListCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		52D8611D222C61D900F93D54 /* Profile+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Extensions.swift"; sourceTree = "<group>"; };
 		52D86121222C625200F93D54 /* Skill+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+Extensions.swift"; sourceTree = "<group>"; };
+		52D86123222C63BC00F93D54 /* PrimaryKeyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryKeyEquatable.swift; sourceTree = "<group>"; };
 		52D86126222C6FEA00F93D54 /* JobListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListSection.swift; sourceTree = "<group>"; };
 		52D86129222C706500F93D54 /* JobListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListCollectionViewCell.swift; sourceTree = "<group>"; };
 		52D8612A222C706500F93D54 /* JobListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobListCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -325,6 +332,7 @@
 		52167920221DF89D009DD2A1 /* CourseListViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5230DC1522332B8C0054714A /* DataSource */,
 				52167933221E05FD009DD2A1 /* CourseListViewController.swift */,
 				52167934221E05FD009DD2A1 /* CourseListViewController.xib */,
 			);
@@ -334,6 +342,7 @@
 		52167921221DF92A009DD2A1 /* CourseListViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5230DC0322330F2D0054714A /* CourseListViewModel.swift */,
 			);
 			path = CourseListViewModel;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 		52167922221DF932009DD2A1 /* CourseListCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				5230DC08223312CB0054714A /* CourseListCoordinator.swift */,
 			);
 			path = CourseListCoordinator;
 			sourceTree = "<group>";
@@ -554,6 +564,14 @@
 				5230DC0B22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift */,
 			);
 			path = Proxies;
+			sourceTree = "<group>";
+		};
+		5230DC1522332B8C0054714A /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5230DC1622332B9B0054714A /* CourseListViewSection.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		52D860D72228A73D00F93D54 /* ProfileViewController */ = {
@@ -1102,7 +1120,9 @@
 				52D86127222C6FEA00F93D54 /* JobListSection.swift in Sources */,
 				52D86130222C7B9100F93D54 /* JobListCoordinator.swift in Sources */,
 				52D86110222BF76500F93D54 /* CourseDetailCoordinator.swift in Sources */,
+				5230DC1722332B9B0054714A /* CourseListViewSection.swift in Sources */,
 				52D86106222B4C7500F93D54 /* UIImage+Extensions.swift in Sources */,
+				5230DC0422330F2E0054714A /* CourseListViewModel.swift in Sources */,
 				52E469952222D36000EBD838 /* ProfileUpdateViewModel.swift in Sources */,
 				52167947221E0887009DD2A1 /* DataStack.swift in Sources */,
 				52D86124222C63BC00F93D54 /* PrimaryKeyEquatable.swift in Sources */,
@@ -1125,6 +1145,7 @@
 				52167931221E05EB009DD2A1 /* JobListViewController.swift in Sources */,
 				52E469852222A5BB00EBD838 /* AppCoordinator.swift in Sources */,
 				52E4696322207A7600EBD838 /* Router.swift in Sources */,
+				5230DC09223312CB0054714A /* CourseListCoordinator.swift in Sources */,
 				5230DC0E22331FAB0054714A /* NSFetchedResultsController+Rx.swift in Sources */,
 				52E469932222D17800EBD838 /* ProfileUpdateCoordinator.swift in Sources */,
 				5220A7A22219E8FE00757250 /* AppDelegate.swift in Sources */,

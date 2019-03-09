@@ -20,6 +20,10 @@ class CourseCollectionViewCell: UICollectionViewCell {
         nameLabel.text = ""
         creditNumberLabel.text = ""
         skillsLabel.text = ""
+        
+        layer.cornerRadius = 10
+        layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        layer.shadowOffset = CGSize(width: 5, height: 5)
     }
     
     func populate(from viewModel: CourseCollectionViewCellViewModelType) {

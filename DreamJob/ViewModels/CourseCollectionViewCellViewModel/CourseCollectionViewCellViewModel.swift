@@ -10,7 +10,6 @@ import Foundation
 
 protocol CourseBasedViewModelType {
     var course: Course { get }
-    init(course: Course)
 }
 
 protocol CourseCollectionViewCellViewModelType: CourseBasedViewModelType {
