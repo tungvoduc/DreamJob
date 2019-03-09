@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 protocol CoreDataStack {
+    var managedObjectContext: NSManagedObjectContext { get }
     func createObject<Type: NSManagedObject>(ofType type: Type.Type) -> Type
     func deleteObject(_ object: NSManagedObject)
     func deleteAllRecords<Type: NSManagedObject>(ofType type: Type.Type, predicate: NSPredicate?)
@@ -17,7 +18,98 @@ protocol CoreDataStack {
     func saveContext()
 }
 
+extension CoreDataStack {
+    
+    // Get fetch result controller
+    func fetchResultController<ItemType: NSManagedObject>(type: ItemType.Type,
+                                                          predicate: NSPredicate?,
+                                                          sortDescriptors: [NSSortDescriptor]?,
+                                                          sectionNameKeyPath: String?,
+                                                          cacheName: String?) -> NSFetchedResultsController<ItemType> {
+        let request = fetchRequest(type: type, predicate: predicate, sortDescriptors: sortDescriptors)
+        request.predicate = predicate
+        
+        if let sortDescriptors = sortDescriptors {
+            request.sortDescriptors = sortDescriptors
+        }
+        
+        return NSFetchedResultsController(fetchRequest: request, managedObjectContext: managedObjectContext, sectionNameKeyPath: sectionNameKeyPath, cacheName: cacheName)
+    }
+    
+    private func fetchRequest<ItemType: NSManagedObject>(type: ItemType.Type,
+                                                         predicate: NSPredicate?,
+                                                         sortDescriptors: [NSSortDescriptor]?) -> NSFetchRequest<ItemType> {
+        let entityName = String(describing: ItemType.self) // Work around for CoreData crash
+        let request: NSFetchRequest<ItemType> = NSFetchRequest(entityName: entityName)
+        request.predicate = predicate
+        
+        if let sortDescriptors = sortDescriptors {
+            request.sortDescriptors = sortDescriptors
+        }
+        
+        return request
+    }
+    
+    private func fetchRequest(entityName: String,
+                              predicate: NSPredicate?,
+                              sortDescriptors: [NSSortDescriptor]?) -> NSFetchRequest<NSManagedObject> {
+        let request: NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName: entityName)
+        request.predicate = predicate
+        if let sortDescriptors = sortDescriptors {
+            request.sortDescriptors = sortDescriptors
+        }
+        
+        return request
+    }
+    
+    /// Return array of managed objects.
+    /// - parameter predicate: Predicate used in fetch request
+    /// - parameter sortDescriptors: sortDescriptors used in fetch request
+    /// - parameter failure: execution for failed case
+    func fetchObjects<ItemType: NSManagedObject>(type: ItemType.Type,
+                                                 predicate: NSPredicate? = nil,
+                                                 sortDescriptors: [NSSortDescriptor]? = nil,
+                                                 failure: (() -> Void)? = nil) -> [ItemType]? {
+        let request = fetchRequest(type: type, predicate: predicate, sortDescriptors: sortDescriptors)
+        return fetchObjects(fetchRequest: request, failure: failure)
+    }
+    
+    /// Return 1 managed object.
+    /// - parameter predicate: Predicate used in fetch request
+    /// - parameter sortDescriptors: sortDescriptors used in fetch request
+    /// - parameter failure: execution for failed case
+    func fetchObject<ItemType: NSManagedObject>(type: ItemType.Type,
+                                                predicate: NSPredicate? = nil,
+                                                sortDescriptors: [NSSortDescriptor]? = nil,
+                                                failure: (() -> Void)?) -> ItemType? {
+        let request = fetchRequest(type: type, predicate: predicate, sortDescriptors: sortDescriptors)
+        request.fetchLimit = 1
+        return fetchObjects(fetchRequest: request, failure: failure)?.first
+    }
+    
+    /// Return array of managed objects.
+    /// - parameter fetchRequest: fetch request used to filtering and sorting result items.
+    /// - parameter failure: execution for failed case
+    func fetchObjects<ItemType: NSManagedObject>(fetchRequest: NSFetchRequest<ItemType>,
+                                                 failure: (() -> Void)? = nil) -> [ItemType]? {
+        do {
+            let result = try managedObjectContext.fetch(fetchRequest)
+            return result
+        } catch {
+            failure?()
+        }
+        
+        return nil
+    }
+}
+
 class DataStack: CoreDataStack {
+    
+    static var shared: DataStack = DataStack()
+    
+    var managedObjectContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
     
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
@@ -105,8 +197,7 @@ class DataStack: CoreDataStack {
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                print(error.localizedDescription)
             }
         }
     }
