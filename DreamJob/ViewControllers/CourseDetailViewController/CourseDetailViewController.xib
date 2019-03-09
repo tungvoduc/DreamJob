@@ -12,8 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CourseDetailViewController" customModule="DreamJob" customModuleProvider="target">
             <connections>
+                <outlet property="actionButton" destination="NZi-b3-xIu" id="5yH-ox-ELz"/>
                 <outlet property="creditNumberLabel" destination="VW6-hk-LYX" id="ima-Le-z0y"/>
                 <outlet property="descriptionLabel" destination="hkr-gG-Q9V" id="fSz-gr-rjb"/>
+                <outlet property="prerequisitesLabel" destination="5pD-Yq-KNE" id="Xcu-DZ-iDg"/>
                 <outlet property="skillsLabel" destination="kC4-qq-s0U" id="0Ah-xP-mHn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,28 +32,51 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills: programming, testing, algorithms, data structures" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kC4-qq-s0U">
-                    <rect key="frame" x="16" y="79" width="343" height="41"/>
+                    <rect key="frame" x="16" y="81" width="343" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prerequisites: programming, testing, algorithms, data structures" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pD-Yq-KNE">
+                    <rect key="frame" x="16" y="132" width="343" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description: This is a a description for this course. Please read it carefully before enrolling into it." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkr-gG-Q9V">
-                    <rect key="frame" x="16" y="128" width="343" height="61"/>
+                    <rect key="frame" x="16" y="183" width="343" height="61"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZi-b3-xIu">
+                    <rect key="frame" x="87.5" y="266" width="200" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="obi-zA-TqW"/>
+                        <constraint firstAttribute="width" constant="200" id="xsG-Ih-xdf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="acitonButtonTapped:" destination="-1" eventType="touchUpInside" id="8Dl-hO-B3w"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="kC4-qq-s0U" firstAttribute="trailing" secondItem="VW6-hk-LYX" secondAttribute="trailing" id="5zK-8W-4h5"/>
                 <constraint firstItem="VW6-hk-LYX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="S61-hE-xX6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VW6-hk-LYX" secondAttribute="trailing" constant="16" id="W8T-cp-ioc"/>
+                <constraint firstItem="5pD-Yq-KNE" firstAttribute="top" secondItem="kC4-qq-s0U" secondAttribute="bottom" constant="10" id="WRe-RI-Zfd"/>
+                <constraint firstItem="NZi-b3-xIu" firstAttribute="top" secondItem="hkr-gG-Q9V" secondAttribute="bottom" constant="22" id="Xkm-qj-wDF"/>
+                <constraint firstItem="5pD-Yq-KNE" firstAttribute="leading" secondItem="kC4-qq-s0U" secondAttribute="leading" id="bal-U4-NVe"/>
                 <constraint firstItem="hkr-gG-Q9V" firstAttribute="trailing" secondItem="kC4-qq-s0U" secondAttribute="trailing" id="fuE-C4-ewz"/>
                 <constraint firstItem="kC4-qq-s0U" firstAttribute="leading" secondItem="VW6-hk-LYX" secondAttribute="leading" id="h5q-xI-4mf"/>
-                <constraint firstItem="hkr-gG-Q9V" firstAttribute="top" secondItem="kC4-qq-s0U" secondAttribute="bottom" constant="8" id="qpE-VY-N4V"/>
+                <constraint firstItem="5pD-Yq-KNE" firstAttribute="trailing" secondItem="kC4-qq-s0U" secondAttribute="trailing" id="jKH-Uu-KKZ"/>
+                <constraint firstItem="NZi-b3-xIu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mot-dX-yfw"/>
                 <constraint firstItem="VW6-hk-LYX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="ss9-pE-JqN"/>
-                <constraint firstItem="kC4-qq-s0U" firstAttribute="top" secondItem="VW6-hk-LYX" secondAttribute="bottom" constant="8" id="u5e-9u-K3Z"/>
+                <constraint firstItem="kC4-qq-s0U" firstAttribute="top" secondItem="VW6-hk-LYX" secondAttribute="bottom" constant="10" id="u5e-9u-K3Z"/>
+                <constraint firstItem="hkr-gG-Q9V" firstAttribute="top" secondItem="5pD-Yq-KNE" secondAttribute="bottom" constant="10" id="ueJ-er-MQh"/>
                 <constraint firstItem="hkr-gG-Q9V" firstAttribute="leading" secondItem="kC4-qq-s0U" secondAttribute="leading" id="wGC-cq-E6j"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
