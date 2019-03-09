@@ -33,9 +33,13 @@ class ProfileJobListViewModel: ProfileJobListViewModelType {
     
     var jobs: [Job]
     
+    private let acquiredSkills: Observable<Set<Skill>>
+    
     init(profile: Profile, jobs: [Job]) {
         self.profile = profile
         self.jobs = jobs
+        acquiredSkills = profile.rx.acquiredSkills
+            .share(replay: 1)
         
         let selectJob = PublishSubject<ProfileJobListCollectionViewCellViewModelType>()
         self.selectJob = selectJob.asObserver()
@@ -43,7 +47,7 @@ class ProfileJobListViewModel: ProfileJobListViewModelType {
     }
     
     func profileJobListCollectionViewCellViewModel(for job: Job) -> ProfileJobListCollectionViewCellViewModelType {
-        return ProfileJobListCollectionViewCellViewModel(profile: profile, job: job)
+        return ProfileJobListCollectionViewCellViewModel(acquiredSkills: acquiredSkills, job: job)
     }
     
 }

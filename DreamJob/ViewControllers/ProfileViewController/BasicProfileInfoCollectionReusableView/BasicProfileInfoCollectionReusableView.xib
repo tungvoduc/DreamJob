@@ -17,16 +17,16 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tung Vo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tao-1q-uNa">
-                    <rect key="frame" x="20" y="20" width="447" height="20"/>
+                    <rect key="frame" x="20" y="20" width="447" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="KvE-FG-CiU"/>
+                        <constraint firstAttribute="height" constant="30" id="KvE-FG-CiU"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11405270" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvV-Wz-0Kc">
-                    <rect key="frame" x="20" y="48" width="447" height="20"/>
+                    <rect key="frame" x="20" y="58" width="447" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="iAO-R5-ICk"/>
                     </constraints>
@@ -35,7 +35,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tung.vo@metropolia.fi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIl-cf-o6j">
-                    <rect key="frame" x="20" y="76" width="447" height="20"/>
+                    <rect key="frame" x="20" y="86" width="447" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="fBV-QT-1Vn"/>
                     </constraints>
@@ -44,7 +44,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150 ECTS credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKQ-FK-4he">
-                    <rect key="frame" x="20" y="104" width="447" height="20"/>
+                    <rect key="frame" x="20" y="114" width="447" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="gnA-0h-weS"/>
                     </constraints>
@@ -53,7 +53,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125 skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfT-hB-Xhz">
-                    <rect key="frame" x="20" y="132" width="447" height="20"/>
+                    <rect key="frame" x="20" y="142" width="447" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="fVV-Lk-XJA"/>
                     </constraints>

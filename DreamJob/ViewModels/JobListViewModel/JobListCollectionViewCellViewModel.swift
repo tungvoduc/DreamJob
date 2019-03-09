@@ -23,7 +23,6 @@ protocol ProfileJobListCollectionViewCellViewModelType: JobListCollectionViewCel
     // Have to be ReplaySubject because of cell reusable
     var acquiredSkillsString: ReplaySubject<String> { get }
     var missingSkillsString: ReplaySubject<String> { get }
-    var profile: Profile { get }
 }
 
 // MARK: ProfileJobListCollectionViewCellViewModel
@@ -41,10 +40,7 @@ class ProfileJobListCollectionViewCellViewModel: ProfileJobListCollectionViewCel
     
     private(set) var job: Job
     
-    private(set) var profile: Profile
-    
-    init(profile: Profile, job: Job) {
-        self.profile = profile
+    init(acquiredSkills: Observable<Set<Skill>>, job: Job) {
         self.job = job
         
         name = job.name ?? "No job name"
@@ -61,7 +57,7 @@ class ProfileJobListCollectionViewCellViewModel: ProfileJobListCollectionViewCel
         
         acquiredSkillsString = ReplaySubject<String>.create(bufferSize: 1)
         
-        profile.rx.acquiredSkills
+        acquiredSkills
             .map ({ acquiredSkills -> Set<Skill> in
                 var skillSet = Set<Skill>()
                 if let jobSkills = job.skills as? Set<Skill> {
@@ -83,7 +79,7 @@ class ProfileJobListCollectionViewCellViewModel: ProfileJobListCollectionViewCel
         
         missingSkillsString = ReplaySubject<String>.create(bufferSize: 1)
         
-        profile.rx.acquiredSkills
+        acquiredSkills
             .map ({ acquiredSkills -> Set<Skill> in
                 var skillSet = Set<Skill>()
                 if let jobSkills = job.skills as? Set<Skill> {
