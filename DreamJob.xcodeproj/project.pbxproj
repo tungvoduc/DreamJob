@@ -48,6 +48,7 @@
 		52D86110222BF76500F93D54 /* CourseDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8610F222BF76500F93D54 /* CourseDetailCoordinator.swift */; };
 		52D86113222BFA2000F93D54 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86111222BFA2000F93D54 /* CourseDetailViewController.swift */; };
 		52D86114222BFA2000F93D54 /* CourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D86112222BFA2000F93D54 /* CourseDetailViewController.xib */; };
+		52D8611E222C61D900F93D54 /* Profile+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8611D222C61D900F93D54 /* Profile+Extensions.swift */; };
 		52D86122222C625200F93D54 /* Skill+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86121222C625200F93D54 /* Skill+Extensions.swift */; };
 		52D86124222C63BC00F93D54 /* PrimaryKeyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D86123222C63BC00F93D54 /* PrimaryKeyEquatable.swift */; };
 		52E4696122207A5600EBD838 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4696022207A5600EBD838 /* Presentable.swift */; };
@@ -132,6 +133,7 @@
 		52D8610F222BF76500F93D54 /* CourseDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailCoordinator.swift; sourceTree = "<group>"; };
 		52D86111222BFA2000F93D54 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		52D86112222BFA2000F93D54 /* CourseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseDetailViewController.xib; sourceTree = "<group>"; };
+		52D8611D222C61D900F93D54 /* Profile+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Extensions.swift"; sourceTree = "<group>"; };
 		52D86121222C625200F93D54 /* Skill+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+Extensions.swift"; sourceTree = "<group>"; };
 		52E4696022207A5600EBD838 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		52E4696222207A7600EBD838 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -604,6 +606,7 @@
 		52D8611C222C61CD00F93D54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				52D8611D222C61D900F93D54 /* Profile+Extensions.swift */,
 				52D86121222C625200F93D54 /* Skill+Extensions.swift */,
 				5230DBFB2231B03A0054714A /* Course+Extension.swift */,
 			);
@@ -1075,6 +1078,7 @@
 				52E4696122207A5600EBD838 /* Presentable.swift in Sources */,
 				52E469AB22249D7100EBD838 /* Profile+Rx.swift in Sources */,
 				52167935221E05FD009DD2A1 /* CourseListViewController.swift in Sources */,
+				52D8611E222C61D900F93D54 /* Profile+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
