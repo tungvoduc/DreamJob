@@ -20,6 +20,12 @@ class JobListCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        layer.cornerRadius = 10
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+        layer.shadowRadius = 15
+        layer.shadowOpacity = 0.3
+        layer.masksToBounds = false
     }
     
     func populate(from viewModel: ProfileJobListCollectionViewCellViewModelType) {

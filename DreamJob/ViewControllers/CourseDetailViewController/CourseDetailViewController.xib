@@ -50,10 +50,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZi-b3-xIu">
-                    <rect key="frame" x="87.5" y="266" width="200" height="45"/>
+                    <rect key="frame" x="62.5" y="294" width="250" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="obi-zA-TqW"/>
-                        <constraint firstAttribute="width" constant="200" id="xsG-Ih-xdf"/>
+                        <constraint firstAttribute="height" constant="50" id="obi-zA-TqW"/>
+                        <constraint firstAttribute="width" constant="250" id="xsG-Ih-xdf"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="Button"/>
@@ -68,7 +68,7 @@
                 <constraint firstItem="VW6-hk-LYX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="S61-hE-xX6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VW6-hk-LYX" secondAttribute="trailing" constant="16" id="W8T-cp-ioc"/>
                 <constraint firstItem="5pD-Yq-KNE" firstAttribute="top" secondItem="kC4-qq-s0U" secondAttribute="bottom" constant="10" id="WRe-RI-Zfd"/>
-                <constraint firstItem="NZi-b3-xIu" firstAttribute="top" secondItem="hkr-gG-Q9V" secondAttribute="bottom" constant="22" id="Xkm-qj-wDF"/>
+                <constraint firstItem="NZi-b3-xIu" firstAttribute="top" secondItem="hkr-gG-Q9V" secondAttribute="bottom" constant="50" id="Xkm-qj-wDF"/>
                 <constraint firstItem="5pD-Yq-KNE" firstAttribute="leading" secondItem="kC4-qq-s0U" secondAttribute="leading" id="bal-U4-NVe"/>
                 <constraint firstItem="hkr-gG-Q9V" firstAttribute="trailing" secondItem="kC4-qq-s0U" secondAttribute="trailing" id="fuE-C4-ewz"/>
                 <constraint firstItem="kC4-qq-s0U" firstAttribute="leading" secondItem="VW6-hk-LYX" secondAttribute="leading" id="h5q-xI-4mf"/>

@@ -35,10 +35,14 @@ class CourseDetailViewController: UIViewController {
         actionButton.layer.cornerRadius = 5
         actionButton.layer.masksToBounds = true
         actionButton.setTitle("Add course to profile", for: .normal)
+        actionButton.setTitle("Add course to profile", for: [.normal, .highlighted])
         actionButton.setTitle("Remove course from profile", for: .selected)
+        actionButton.setTitle("Remove course from profile", for: [.selected, .highlighted])
         actionButton.setTitleColor(UIColor.white, for: [])
         actionButton.setBackgroundImage(UIImage.imageWithColor(UIColor.blue, size: CGSize(width: 1, height: 1)), for: .normal)
+        actionButton.setBackgroundImage(UIImage.imageWithColor(UIColor.blue, size: CGSize(width: 1, height: 1)), for: [.normal, .highlighted])
         actionButton.setBackgroundImage(UIImage.imageWithColor(UIColor.red, size: CGSize(width: 1, height: 1)), for: .selected)
+        actionButton.setBackgroundImage(UIImage.imageWithColor(UIColor.red, size: CGSize(width: 1, height: 1)), for: [.selected, .highlighted])
 
         // Do any additional setup after loading the view.
         populateData()
