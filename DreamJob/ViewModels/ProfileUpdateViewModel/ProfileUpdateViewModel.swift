@@ -61,7 +61,7 @@ class ProfileUpdateViewModel: ProfileUpdateViewModeling {
     
     private let disposeBag = DisposeBag()
     
-    init(coreDataStack: CoreDataStack = DataStack(), profileManager: ProfileManaging = ProfileManager()) {
+    init(coreDataStack: CoreDataStack = DataStack.shared, profileManager: ProfileManaging = ProfileManager()) {
         self.coreDataStack = coreDataStack
         let _email = BehaviorSubject<String>.init(value: "")
         let _address = BehaviorSubject<String>.init(value: "")

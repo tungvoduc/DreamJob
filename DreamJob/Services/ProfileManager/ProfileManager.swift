@@ -23,7 +23,7 @@ class ProfileManager: ProfileManaging {
     
     var coreDataStack: CoreDataStack
     
-    init(coreDataStack: CoreDataStack = DataStack()) {
+    init(coreDataStack: CoreDataStack = DataStack.shared) {
         self.coreDataStack = coreDataStack
     }
     
