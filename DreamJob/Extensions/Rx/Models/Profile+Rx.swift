@@ -63,9 +63,22 @@ extension Reactive where Base: Profile {
     
     var completedCourses: Observable<Set<Course>> {
         return observe(NSSet.self, #keyPath(Profile.completedCourses))
-            .map({ set -> Set<Course> in
-                return set as? Set<Course> ?? Set<Course>()
-            })
+            .map {_ in self.base.completedCourses?.asSet(type: Course.self) ?? Set<Course>() }
+            .startWith(base.completedCourses?.asSet(type: Course.self) ?? Set<Course>())
+            .share()
+    }
+    
+    var acquiredSkills: Observable<Set<Skill>> {
+        return observe(NSSet.self, #keyPath(Profile.completedCourses))
+            .map { [weak base] _ in base?.acquiredSkills ?? Set<Skill>() }
+            .startWith(base.acquiredSkills)
+            .share()
+    }
+    
+    func didCompleteCourse(_ course: Course) -> Observable<Bool> {
+        return observe(NSSet.self, #keyPath(Profile.completedCourses))
+            .map { _ in self.base.didCompleteCourse(course) }
+            .startWith(self.base.didCompleteCourse(course))
             .share()
     }
     
