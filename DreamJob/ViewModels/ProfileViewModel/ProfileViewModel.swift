@@ -36,9 +36,10 @@ class ProfileViewModel: ProfileViewModelType {
     required init(profile: Profile) {
         self.profile = profile
         basicProfileInfo = BasicProfileInfoViewModel(profile: profile)
-        completedCourses = profile.rx.completedCourses
+        let completedCourses = profile.rx.completedCourses
+        self.completedCourses = completedCourses
             .map {
-                Array($0.map { CourseCollectionViewCellViewModel(course: $0) })
+                Array($0.map { CourseCollectionViewCellViewModel(course: $0, completedCourses: completedCourses) })
                     .sorted { $0.name < $1.name }
             }
         

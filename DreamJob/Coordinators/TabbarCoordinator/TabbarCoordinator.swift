@@ -29,7 +29,7 @@ class TabbarCoordinator: BaseCoordinator {
         
         profileCoordinator = ProfileCoordinator(viewModel: ProfileViewModel(profile: profile))
         
-        courseListCoordinator = CourseListCoordinator(viewModel: CourseListViewModel(), profile: profile)
+        courseListCoordinator = CourseListCoordinator(viewModel: CourseListViewModel(profile: profile), profile: profile)
         
         super.init(router: router)
         

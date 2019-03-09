@@ -33,7 +33,7 @@ class CourseListViewModel: NSObject, CourseListViewModelType, NSFetchedResultsCo
     
     private let disposeBag = DisposeBag()
     
-    init(dataStack: CoreDataStack = DataStack.shared) {
+    init(profile: Profile, dataStack: CoreDataStack = DataStack.shared) {
         
         coursesSubject = ReplaySubject<[CourseCollectionViewCellViewModelType]>.create(bufferSize: 1)
         
@@ -42,6 +42,10 @@ class CourseListViewModel: NSObject, CourseListViewModelType, NSFetchedResultsCo
         self.openCourseDetail = openCourseDetail.asObservable()
         
         courses = coursesSubject.asObservable()
+        
+        let completedCourses = profile.rx
+            .completedCourses
+            .share(replay: 1)
         
         fetchedCoursesController = dataStack.fetchResultController(type: Course.self, predicate: nil, sortDescriptors: [NSSortDescriptor(key: #keyPath(Course.name), ascending: true)], sectionNameKeyPath: nil, cacheName: nil)
         
@@ -52,7 +56,7 @@ class CourseListViewModel: NSObject, CourseListViewModelType, NSFetchedResultsCo
             .map { $0 as! NSFetchedResultsController<Course> }
             .map { $0.fetchedObjects }
             .flatMap { Observable.from(optional: $0) }
-            .map { $0.map { CourseCollectionViewCellViewModel(course: $0) } }
+            .map { $0.map { CourseCollectionViewCellViewModel(course: $0, completedCourses: completedCourses) } }
             .bind(to: coursesSubject)
             .disposed(by: disposeBag)
         

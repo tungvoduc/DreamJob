@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CourseCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var creditNumberLabel: UILabel!
     @IBOutlet weak var skillsLabel: UILabel!
+    @IBOutlet weak var statusView: UIView!
+    
+    private var disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,10 +34,23 @@ class CourseCollectionViewCell: UICollectionViewCell {
         layer.masksToBounds = false
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+    
     func populate(from viewModel: CourseCollectionViewCellViewModelType) {
         nameLabel.text = viewModel.name
         creditNumberLabel.text = viewModel.creditNumberString
         skillsLabel.text = viewModel.skillString
+        
+        viewModel.isCompleted
+            .subscribe(onNext: { [weak self] isCompleted in
+                if let strongSelf = self {
+                    strongSelf.statusView.backgroundColor = isCompleted ? UIColor.available : UIColor.notAvailable
+                }
+            })
+            .disposed(by: disposeBag)
     }
 
 }

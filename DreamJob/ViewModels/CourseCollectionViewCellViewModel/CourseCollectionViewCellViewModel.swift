@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import RxCocoa
+import RxSwift
 
 protocol CourseBasedViewModelType {
     var course: Course { get }
@@ -16,9 +18,16 @@ protocol CourseCollectionViewCellViewModelType: CourseBasedViewModelType {
     var name: String { get }
     var creditNumberString: String { get }
     var skillString: String { get }
+    var isCompleted: Observable<Bool> { get }
 }
 
-struct CourseCollectionViewCellViewModel: CourseCollectionViewCellViewModelType, Equatable {
+class CourseCollectionViewCellViewModel: CourseCollectionViewCellViewModelType, Equatable {
+    
+    static func == (lhs: CourseCollectionViewCellViewModel, rhs: CourseCollectionViewCellViewModel) -> Bool {
+        return lhs.course.hasSamePrimaryKey(with: rhs.course)
+    }
+    
+    var isCompleted: Observable<Bool>
     
     var name: String
     
@@ -28,7 +37,9 @@ struct CourseCollectionViewCellViewModel: CourseCollectionViewCellViewModelType,
     
     let course: Course
     
-    init(course: Course) {
+    private let disposeBag = DisposeBag()
+    
+    init(course: Course, completedCourses: Observable<Set<Course>>) {
         self.course = course
         
         name = course.name ?? ""
@@ -62,6 +73,15 @@ struct CourseCollectionViewCellViewModel: CourseCollectionViewCellViewModelType,
         } else {
             skillString = skillsPrefix + "Not available"
         }
+        
+        let isCompleted = ReplaySubject<Bool>.create(bufferSize: 1)
+        completedCourses
+            .map { $0.contains(where: { $0.hasSamePrimaryKey(with: course) }) }
+            .bind(to: isCompleted)
+            .disposed(by: disposeBag)
+        self.isCompleted = isCompleted
+            .asObservable()
+            .share(replay: 1)
     }
 
 }
