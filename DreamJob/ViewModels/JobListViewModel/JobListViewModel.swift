@@ -17,17 +17,17 @@ protocol JobListViewModelType {
 // MARK: JobListViewModelType
 protocol ProfileJobListViewModelType: JobListViewModelType {
     var profile: Profile { get }
-    var selectJob: AnyObserver<ProfileJobListCollectionViewCellViewModelType> { get }
-    var didSelectJob: Observable<ProfileJobListCollectionViewCellViewModelType> { get }
+    var selectJob: AnyObserver<JobDetailViewModelType> { get }
+    var didSelectJob: Observable<JobDetailViewModelType> { get }
     func profileJobListCollectionViewCellViewModel(for job: Job) -> ProfileJobListCollectionViewCellViewModelType
 }
 
 // MARK: ProfileJobListViewModel
 class ProfileJobListViewModel: ProfileJobListViewModelType {
     
-    var selectJob: AnyObserver<ProfileJobListCollectionViewCellViewModelType>
+    var selectJob: AnyObserver<JobDetailViewModelType>
     
-    var didSelectJob: Observable<ProfileJobListCollectionViewCellViewModelType>
+    var didSelectJob: Observable<JobDetailViewModelType>
     
     var profile: Profile
     
@@ -41,7 +41,7 @@ class ProfileJobListViewModel: ProfileJobListViewModelType {
         acquiredSkills = profile.rx.acquiredSkills
             .share(replay: 1)
         
-        let selectJob = PublishSubject<ProfileJobListCollectionViewCellViewModelType>()
+        let selectJob = PublishSubject<JobDetailViewModelType>()
         self.selectJob = selectJob.asObserver()
         didSelectJob = selectJob.asObservable()
     }

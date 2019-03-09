@@ -14,6 +14,7 @@ import RxCocoa
 protocol JobDetailViewModelType {
     var name: NSAttributedString { get }
     var totalSkillsString: NSAttributedString { get }
+    var jobDescription: NSAttributedString { get }
     var acquiredSkillsString: Observable<NSAttributedString> { get }
     var missingSkillsString: Observable<NSAttributedString> { get }
     var studyPathAlternativeCountString: Observable<NSAttributedString> { get }
@@ -25,6 +26,8 @@ class JobDetailViewModel: JobDetailViewModelType {
     var name: NSAttributedString
     
     var totalSkillsString: NSAttributedString
+    
+    var jobDescription: NSAttributedString
     
     var acquiredSkillsString: Observable<NSAttributedString>
     
@@ -38,6 +41,7 @@ class JobDetailViewModel: JobDetailViewModelType {
         let creator = JobViewModelDataCreator(acquiredSkills: acquiredSkills, job: job)
         name = creator.jobNameAttributedString()
         totalSkillsString = creator.totalSkillsString()
+        jobDescription = creator.jobDescriptionAttributedString()
         acquiredSkillsString = creator.acquiredSkillsString(disposedBy: disposeBag)
         missingSkillsString = creator.missingSkillsString(disposedBy: disposeBag)
         studyPathAlternativeCountString = creator.studyPathAlternativeCountString(disposedBy: disposeBag)

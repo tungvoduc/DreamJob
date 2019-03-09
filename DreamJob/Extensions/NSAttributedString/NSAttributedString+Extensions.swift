@@ -10,7 +10,7 @@ import UIKit
 
 extension NSAttributedString {
     
-    convenience init(string: String, font: UIFont, textColor: UIColor, textAlignment: NSTextAlignment = NSTextAlignment.left, lineSpacing: CGFloat = 0) {
+    convenience init(string: String, font: UIFont, textColor: UIColor, textAlignment: NSTextAlignment = NSTextAlignment.left, lineSpacing: CGFloat = 5) {
         let attributes = NSAttributedString.attributesFor(font: font, textColor: textColor, textAlignment: textAlignment, lineSpacing: lineSpacing)
         self.init(string: string, attributes: attributes)
     }
@@ -23,7 +23,7 @@ extension NSAttributedString {
         return boundingRect(with: CGSize(width: CGFloat.infinity, height: height), options: NSStringDrawingOptions.usesFontLeading, context: nil).size.width
     }
     
-    class func attributesFor(font: UIFont, textColor: UIColor, textAlignment: NSTextAlignment = NSTextAlignment.left, lineSpacing: CGFloat = 0) -> [NSAttributedString.Key: Any] {
+    class func attributesFor(font: UIFont, textColor: UIColor, textAlignment: NSTextAlignment = NSTextAlignment.left, lineSpacing: CGFloat = 5) -> [NSAttributedString.Key: Any] {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = textAlignment
         paragraphStyle.paragraphSpacingBefore = 0

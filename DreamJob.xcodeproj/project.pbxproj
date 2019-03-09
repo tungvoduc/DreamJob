@@ -40,6 +40,7 @@
 		5255994D2233C58400EA77D0 /* JobDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255994C2233C58400EA77D0 /* JobDetailViewModel.swift */; };
 		5255994F2233C86300EA77D0 /* JobViewModelDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255994E2233C86300EA77D0 /* JobViewModelDataCreator.swift */; };
 		525599522233CAFA00EA77D0 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525599512233CAFA00EA77D0 /* NSAttributedString+Extensions.swift */; };
+		525599542233DAAC00EA77D0 /* JobDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525599532233DAAC00EA77D0 /* JobDetailCoordinator.swift */; };
 		52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */; };
 		52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D32228A71900F93D54 /* ProfileViewController.swift */; };
 		52D860D62228A71900F93D54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860D42228A71900F93D54 /* ProfileViewController.xib */; };
@@ -141,6 +142,7 @@
 		5255994C2233C58400EA77D0 /* JobDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewModel.swift; sourceTree = "<group>"; };
 		5255994E2233C86300EA77D0 /* JobViewModelDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModelDataCreator.swift; sourceTree = "<group>"; };
 		525599512233CAFA00EA77D0 /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
+		525599532233DAAC00EA77D0 /* JobDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailCoordinator.swift; sourceTree = "<group>"; };
 		52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		52D860D32228A71900F93D54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		52D860D42228A71900F93D54 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 		52167928221DF99D009DD2A1 /* JobDetailCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				525599532233DAAC00EA77D0 /* JobDetailCoordinator.swift */,
 			);
 			path = JobDetailCoordinator;
 			sourceTree = "<group>";
@@ -1168,6 +1171,7 @@
 				52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */,
 				52D860FF222B352000F93D54 /* CourseCollectionViewCell.swift in Sources */,
 				52D86122222C625200F93D54 /* Skill+Extensions.swift in Sources */,
+				525599542233DAAC00EA77D0 /* JobDetailCoordinator.swift in Sources */,
 				5220A7A42219E8FE00757250 /* ViewController.swift in Sources */,
 				521A626B2225E24D003BE6D5 /* CourseCollectionViewCellViewModel.swift in Sources */,
 				52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */,

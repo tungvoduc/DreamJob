@@ -14,7 +14,10 @@ private let cellReuseIdentifier = "Cell"
 
 class JobListViewController: UICollectionViewController {
     
-    private(set) var viewModel: ProfileJobListViewModelType!
+    private(set) lazy var viewModel: ProfileJobListViewModelType = {
+        let jobs = dataStack.allRecords(ofType: Job.self)
+        return ProfileJobListViewModel(profile: profile, jobs: jobs)
+    }()
     
     private(set) var profile: Profile
     
@@ -41,9 +44,6 @@ class JobListViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let jobs = dataStack.allRecords(ofType: Job.self)
-        viewModel = ProfileJobListViewModel(profile: profile, jobs: jobs)
 
         // Register cell classes
         collectionView!.register(UINib(nibName: "JobListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
@@ -63,12 +63,10 @@ class JobListViewController: UICollectionViewController {
             .bind(to: collectionView.rx.items(dataSource: sectionDataSource))
             .disposed(by: disposeBag)
         
-        collectionView.rx.willDisplayCell
-        
-//        collectionView.rx.modelSelected(ProfileJobListCollectionViewCellViewModelType.self)
-//            .map { CourseDetailViewModel(course: $0.course) }
-//            .bind(to: viewModel.selectCourseDetail)
-//            .disposed(by: disposeBag)
+        collectionView.rx.modelSelected(ProfileJobListCollectionViewCellViewModelType.self)
+            .map { JobDetailViewModel(acquiredSkills: viewModel.profile.rx.acquiredSkills, job: $0.job) }
+            .bind(to: viewModel.selectJob)
+            .disposed(by: disposeBag)
     }
     
 }

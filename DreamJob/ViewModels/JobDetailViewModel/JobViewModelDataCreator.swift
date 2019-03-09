@@ -21,9 +21,9 @@ class JobViewModelDataCreator {
     
     private var defaultFont = UIFont.systemFont(ofSize: 17)
     
-    private var placeholderTextColor = UIColor.gray
+    private var placeholderTextColor = UIColor.lightText
     
-    private var defaultTextColor = UIColor.black
+    private var defaultTextColor = UIColor.darkText
     
     init(acquiredSkills: Observable<Set<Skill>>, job: Job) {
         self.acquiredSkills = acquiredSkills
@@ -32,9 +32,23 @@ class JobViewModelDataCreator {
     
     func jobNameAttributedString() -> NSAttributedString {
         if let name = job.name {
-            return NSAttributedString(string: name, font: boldFont, textColor: defaultTextColor)
+            return NSAttributedString(string: name, font: UIFont.boldSystemFont(ofSize: 20), textColor: defaultTextColor)
         }
-        return NSAttributedString(string: "Invalid name", font: boldFont, textColor: placeholderTextColor)
+        return NSAttributedString(string: "Invalid name", font: UIFont.boldSystemFont(ofSize: 20), textColor: placeholderTextColor)
+    }
+    
+    func jobDescriptionAttributedString() -> NSAttributedString {
+        let prefixAttributedString = NSMutableAttributedString(string: "Job description: ", font: boldFont, textColor: defaultTextColor)
+        let suffixAttributedString: NSAttributedString
+        
+        if let description = job.jobDescription {
+            suffixAttributedString = NSAttributedString(string: description, font: defaultFont, textColor: defaultTextColor)
+        } else {
+            suffixAttributedString = NSAttributedString(string: "No description", font: defaultFont, textColor: placeholderTextColor)
+        }
+        
+        prefixAttributedString.append(suffixAttributedString)
+        return prefixAttributedString
     }
     
     func totalSkillsString() -> NSAttributedString {
