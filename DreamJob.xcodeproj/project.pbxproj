@@ -37,6 +37,8 @@
 		5230DC1722332B9B0054714A /* CourseListViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC1622332B9B0054714A /* CourseListViewSection.swift */; };
 		5230DC1B223347480054714A /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC1A223347480054714A /* TabbarCoordinator.swift */; };
 		5230DC1F2233546A0054714A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC1E2233546A0054714A /* UIColor+Extensions.swift */; };
+		5255994D2233C58400EA77D0 /* JobDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255994C2233C58400EA77D0 /* JobDetailViewModel.swift */; };
+		5255994F2233C86300EA77D0 /* JobViewModelDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255994E2233C86300EA77D0 /* JobViewModelDataCreator.swift */; };
 		525599522233CAFA00EA77D0 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525599512233CAFA00EA77D0 /* NSAttributedString+Extensions.swift */; };
 		52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */; };
 		52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D32228A71900F93D54 /* ProfileViewController.swift */; };
@@ -136,6 +138,8 @@
 		5230DC1622332B9B0054714A /* CourseListViewSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseListViewSection.swift; path = DreamJob/ViewControllers/CourseListViewController/DataSource/CourseListViewSection.swift; sourceTree = SOURCE_ROOT; };
 		5230DC1A223347480054714A /* TabbarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
 		5230DC1E2233546A0054714A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		5255994C2233C58400EA77D0 /* JobDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewModel.swift; sourceTree = "<group>"; };
+		5255994E2233C86300EA77D0 /* JobViewModelDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModelDataCreator.swift; sourceTree = "<group>"; };
 		525599512233CAFA00EA77D0 /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		52D860D32228A71900F93D54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -399,6 +403,8 @@
 		52167927221DF996009DD2A1 /* JobDetailViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5255994C2233C58400EA77D0 /* JobDetailViewModel.swift */,
+				5255994E2233C86300EA77D0 /* JobViewModelDataCreator.swift */,
 			);
 			path = JobDetailViewModel;
 			sourceTree = "<group>";
@@ -1165,6 +1171,7 @@
 				5220A7A42219E8FE00757250 /* ViewController.swift in Sources */,
 				521A626B2225E24D003BE6D5 /* CourseCollectionViewCellViewModel.swift in Sources */,
 				52E4696522207BD900EBD838 /* BaseCoordinator.swift in Sources */,
+				5255994D2233C58400EA77D0 /* JobDetailViewModel.swift in Sources */,
 				52D86119222C1DEB00F93D54 /* JobListCollectionViewCellViewModel.swift in Sources */,
 				52167917221DF7CE009DD2A1 /* ProfileUpdateViewController.swift in Sources */,
 				5230DBFC2231B03A0054714A /* Course+Extension.swift in Sources */,
@@ -1178,6 +1185,7 @@
 				52E469932222D17800EBD838 /* ProfileUpdateCoordinator.swift in Sources */,
 				5220A7A22219E8FE00757250 /* AppDelegate.swift in Sources */,
 				5216793D221E0617009DD2A1 /* JobDetailViewController.swift in Sources */,
+				5255994F2233C86300EA77D0 /* JobViewModelDataCreator.swift in Sources */,
 				5230DBFA2231AF920054714A /* NSSet.swift in Sources */,
 				5220A7AA2219E8FE00757250 /* DreamJob.xcdatamodeld in Sources */,
 				52E4696122207A5600EBD838 /* Presentable.swift in Sources */,
