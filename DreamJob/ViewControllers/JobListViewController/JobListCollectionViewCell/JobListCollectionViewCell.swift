@@ -29,25 +29,25 @@ class JobListCollectionViewCell: UICollectionViewCell {
     }
     
     func populate(from viewModel: ProfileJobListCollectionViewCellViewModelType) {
-        nameLabel.text = viewModel.name
-        requiredSkillLabel.text = viewModel.totalSkillsString
+        nameLabel.attributedText = viewModel.name
+        requiredSkillLabel.attributedText = viewModel.totalSkillsString
         
         viewModel.acquiredSkillsString.subscribe(onNext: {[weak self] string in
-            self?.acquiredSkillLabel.text = string
+            self?.acquiredSkillLabel.attributedText = string
         }).disposed(by: disposeBag)
         
         
         viewModel.missingSkillsString.subscribe(onNext: {[weak self] string in
-            self?.missingSkillLabel.text = string
+            self?.missingSkillLabel.attributedText = string
         }).disposed(by: disposeBag)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        nameLabel.text = nil
-        requiredSkillLabel.text = nil
-        acquiredSkillLabel.text = nil
-        missingSkillLabel.text = nil
+        nameLabel.attributedText = nil
+        requiredSkillLabel.attributedText = nil
+        acquiredSkillLabel.attributedText = nil
+        missingSkillLabel.attributedText = nil
     }
 
 }

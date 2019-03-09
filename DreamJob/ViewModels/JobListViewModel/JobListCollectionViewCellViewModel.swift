@@ -12,8 +12,8 @@ import RxCocoa
 
 // MARK: JobListCollectionViewCellViewModelType
 protocol JobListCollectionViewCellViewModelType {
-    var name: String { get }
-    var totalSkillsString: String { get }
+    var name: NSAttributedString { get }
+    var totalSkillsString: NSAttributedString { get }
     var job: Job { get }
 }
 
@@ -21,20 +21,20 @@ protocol JobListCollectionViewCellViewModelType {
 protocol ProfileJobListCollectionViewCellViewModelType: JobListCollectionViewCellViewModelType {
     
     // Have to be ReplaySubject because of cell reusable
-    var acquiredSkillsString: ReplaySubject<String> { get }
-    var missingSkillsString: ReplaySubject<String> { get }
+    var acquiredSkillsString: Observable<NSAttributedString> { get }
+    var missingSkillsString: Observable<NSAttributedString> { get }
 }
 
 // MARK: ProfileJobListCollectionViewCellViewModel
 class ProfileJobListCollectionViewCellViewModel: ProfileJobListCollectionViewCellViewModelType {
     
-    var acquiredSkillsString: ReplaySubject<String>
+    var acquiredSkillsString: Observable<NSAttributedString>
     
-    var missingSkillsString: ReplaySubject<String>
+    var missingSkillsString: Observable<NSAttributedString>
     
-    var name: String
+    var name: NSAttributedString
     
-    var totalSkillsString: String
+    var totalSkillsString: NSAttributedString
     
     private let disposeBag = DisposeBag()
     
@@ -43,61 +43,11 @@ class ProfileJobListCollectionViewCellViewModel: ProfileJobListCollectionViewCel
     init(acquiredSkills: Observable<Set<Skill>>, job: Job) {
         self.job = job
         
-        name = job.name ?? "No job name"
-
-        if let skills = (job.skills?.allObjects as? [Skill])?.compactMap({ $0.name }), !skills.isEmpty {
-            if skills.count == 1 {
-                totalSkillsString = "Skills required: \(skills[0])"
-            } else {
-                totalSkillsString = "Skills required: \(skills.joined(separator: ", "))"
-            }
-        } else {
-            totalSkillsString = "No skills required"
-        }
-        
-        acquiredSkillsString = ReplaySubject<String>.create(bufferSize: 1)
-        
-        acquiredSkills
-            .map ({ acquiredSkills -> Set<Skill> in
-                var skillSet = Set<Skill>()
-                if let jobSkills = job.skills as? Set<Skill> {
-                    for jobSkill in jobSkills {
-                        if acquiredSkills.contains(where: { $0.hasSamePrimaryKey(with: jobSkill) }) {
-                            skillSet.insert(jobSkill)
-                        }
-                    }
-                }
-                return skillSet
-            })
-            .map { $0.compactMap { $0.name } }
-            .map { Array($0) }
-            .map { $0.sorted().joined(separator: ", ") }
-            .map { $0.isEmpty ? "None" : $0 }
-            .map { "Already have: \($0)" }
-            .bind(to: self.acquiredSkillsString)
-            .disposed(by: disposeBag)
-        
-        missingSkillsString = ReplaySubject<String>.create(bufferSize: 1)
-        
-        acquiredSkills
-            .map ({ acquiredSkills -> Set<Skill> in
-                var skillSet = Set<Skill>()
-                if let jobSkills = job.skills as? Set<Skill> {
-                    for jobSkill in jobSkills {
-                        if !acquiredSkills.contains(where: { $0.hasSamePrimaryKey(with: jobSkill) }) {
-                            skillSet.insert(jobSkill)
-                        }
-                    }
-                }
-                return skillSet
-            })
-            .map { $0.compactMap { $0.name } }
-            .map { Array($0) }
-            .map { $0.sorted().joined(separator: ", ") }
-            .map { $0.isEmpty ? "None" : $0 }
-            .map { "Mssing: \($0)" }
-            .bind(to: self.missingSkillsString)
-            .disposed(by: disposeBag)
+        let creator = JobViewModelDataCreator(acquiredSkills: acquiredSkills, job: job)
+        name = creator.jobNameAttributedString()
+        totalSkillsString = creator.totalSkillsString()
+        acquiredSkillsString = creator.acquiredSkillsString(disposedBy: disposeBag)
+        missingSkillsString = creator.missingSkillsString(disposedBy: disposeBag)
     }
     
 }
