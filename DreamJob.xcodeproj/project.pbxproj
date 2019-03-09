@@ -365,7 +365,6 @@
 		52167923221DF95C009DD2A1 /* CourseDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				52D8610C222BF48C00F93D54 /* CourseDetailViewModel */,
 				52D86111222BFA2000F93D54 /* CourseDetailViewController.swift */,
 				52D86112222BFA2000F93D54 /* CourseDetailViewController.xib */,
 			);
@@ -375,6 +374,7 @@
 		52167924221DF966009DD2A1 /* CourseDetailViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				52D8610D222BF49F00F93D54 /* CourseDetailViewModel.swift */,
 			);
 			path = CourseDetailViewModel;
 			sourceTree = "<group>";
@@ -671,14 +671,6 @@
 				52D8610A222BDC3500F93D54 /* ProfileViewSection.swift */,
 			);
 			path = DataSource;
-			sourceTree = "<group>";
-		};
-		52D8610C222BF48C00F93D54 /* CourseDetailViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				52D8610D222BF49F00F93D54 /* CourseDetailViewModel.swift */,
-			);
-			path = CourseDetailViewModel;
 			sourceTree = "<group>";
 		};
 		52D8611C222C61CD00F93D54 /* Models */ = {
