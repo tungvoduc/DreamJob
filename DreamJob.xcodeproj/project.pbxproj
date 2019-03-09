@@ -36,6 +36,7 @@
 		5230DC0E22331FAB0054714A /* NSFetchedResultsController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC0D22331FAB0054714A /* NSFetchedResultsController+Rx.swift */; };
 		5230DC1722332B9B0054714A /* CourseListViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC1622332B9B0054714A /* CourseListViewSection.swift */; };
 		5230DC1B223347480054714A /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC1A223347480054714A /* TabbarCoordinator.swift */; };
+		5230DC1F2233546A0054714A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC1E2233546A0054714A /* UIColor+Extensions.swift */; };
 		52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */; };
 		52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D32228A71900F93D54 /* ProfileViewController.swift */; };
 		52D860D62228A71900F93D54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860D42228A71900F93D54 /* ProfileViewController.xib */; };
@@ -133,6 +134,7 @@
 		5230DC0D22331FAB0054714A /* NSFetchedResultsController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+Rx.swift"; sourceTree = "<group>"; };
 		5230DC1622332B9B0054714A /* CourseListViewSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseListViewSection.swift; path = DreamJob/ViewControllers/CourseListViewController/DataSource/CourseListViewSection.swift; sourceTree = SOURCE_ROOT; };
 		5230DC1A223347480054714A /* TabbarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
+		5230DC1E2233546A0054714A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		52D860D32228A71900F93D54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		52D860D42228A71900F93D54 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -585,6 +587,14 @@
 			path = TabbarCoordinator;
 			sourceTree = "<group>";
 		};
+		5230DC1D2233545B0054714A /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				5230DC1E2233546A0054714A /* UIColor+Extensions.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		52D860D72228A73D00F93D54 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,6 +824,7 @@
 		52E469A722249D5200EBD838 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5230DC1D2233545B0054714A /* UIColor */,
 				52D8611C222C61CD00F93D54 /* Models */,
 				52D86104222B4C6700F93D54 /* UIImage */,
 				52E469A822249D5C00EBD838 /* Rx */,
@@ -1144,6 +1155,7 @@
 				52D860F7222ACCDF00F93D54 /* BasicProfileInfoCollectionReusableView.swift in Sources */,
 				52D86108222BCBC600F93D54 /* ProfileCoordinator.swift in Sources */,
 				52D8610B222BDC3500F93D54 /* ProfileViewSection.swift in Sources */,
+				5230DC1F2233546A0054714A /* UIColor+Extensions.swift in Sources */,
 				52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */,
 				52D860FF222B352000F93D54 /* CourseCollectionViewCell.swift in Sources */,
 				52D86122222C625200F93D54 /* Skill+Extensions.swift in Sources */,
