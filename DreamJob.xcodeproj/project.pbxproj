@@ -30,6 +30,8 @@
 		5220A7BA2219E90300757250 /* DreamJobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220A7B92219E90300757250 /* DreamJobUITests.swift */; };
 		5230DBFA2231AF920054714A /* NSSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DBF92231AF920054714A /* NSSet.swift */; };
 		5230DBFC2231B03A0054714A /* Course+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DBFB2231B03A0054714A /* Course+Extension.swift */; };
+		5230DC0C22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC0B22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift */; };
+		5230DC0E22331FAB0054714A /* NSFetchedResultsController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230DC0D22331FAB0054714A /* NSFetchedResultsController+Rx.swift */; };
 		52D860D222289D6400F93D54 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */; };
 		52D860D52228A71900F93D54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D860D32228A71900F93D54 /* ProfileViewController.swift */; };
 		52D860D62228A71900F93D54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D860D42228A71900F93D54 /* ProfileViewController.xib */; };
@@ -121,6 +123,8 @@
 		5220A7BB2219E90300757250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5230DBF92231AF920054714A /* NSSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSet.swift; sourceTree = "<group>"; };
 		5230DBFB2231B03A0054714A /* Course+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Extension.swift"; sourceTree = "<group>"; };
+		5230DC0B22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFetchedResultsControllerDelegateProxy.swift; sourceTree = "<group>"; };
+		5230DC0D22331FAB0054714A /* NSFetchedResultsController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+Rx.swift"; sourceTree = "<group>"; };
 		52D860D122289D6400F93D54 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		52D860D32228A71900F93D54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		52D860D42228A71900F93D54 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -544,6 +548,14 @@
 			path = DreamJobUITests;
 			sourceTree = "<group>";
 		};
+		5230DC0A22331F800054714A /* Proxies */ = {
+			isa = PBXGroup;
+			children = (
+				5230DC0B22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift */,
+			);
+			path = Proxies;
+			sourceTree = "<group>";
+		};
 		52D860D72228A73D00F93D54 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,6 +797,7 @@
 		52E469A822249D5C00EBD838 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
+				5230DC0A22331F800054714A /* Proxies */,
 				52E469A922249D6100EBD838 /* Models */,
 			);
 			path = Rx;
@@ -794,6 +807,7 @@
 			isa = PBXGroup;
 			children = (
 				52E469AA22249D7100EBD838 /* Profile+Rx.swift */,
+				5230DC0D22331FAB0054714A /* NSFetchedResultsController+Rx.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1107,9 +1121,11 @@
 				52D86119222C1DEB00F93D54 /* JobListCollectionViewCellViewModel.swift in Sources */,
 				52167917221DF7CE009DD2A1 /* ProfileUpdateViewController.swift in Sources */,
 				5230DBFC2231B03A0054714A /* Course+Extension.swift in Sources */,
+				5230DC0C22331F880054714A /* NSFetchedResultsControllerDelegateProxy.swift in Sources */,
 				52167931221E05EB009DD2A1 /* JobListViewController.swift in Sources */,
 				52E469852222A5BB00EBD838 /* AppCoordinator.swift in Sources */,
 				52E4696322207A7600EBD838 /* Router.swift in Sources */,
+				5230DC0E22331FAB0054714A /* NSFetchedResultsController+Rx.swift in Sources */,
 				52E469932222D17800EBD838 /* ProfileUpdateCoordinator.swift in Sources */,
 				5220A7A22219E8FE00757250 /* AppDelegate.swift in Sources */,
 				5216793D221E0617009DD2A1 /* JobDetailViewController.swift in Sources */,
@@ -1117,6 +1133,7 @@
 				5220A7AA2219E8FE00757250 /* DreamJob.xcdatamodeld in Sources */,
 				52E4696122207A5600EBD838 /* Presentable.swift in Sources */,
 				52E469AB22249D7100EBD838 /* Profile+Rx.swift in Sources */,
+				52D86117222C1CD400F93D54 /* TabbarCoordinator.swift in Sources */,
 				52167935221E05FD009DD2A1 /* CourseListViewController.swift in Sources */,
 				52D8611E222C61D900F93D54 /* Profile+Extensions.swift in Sources */,
 			);
