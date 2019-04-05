@@ -39,7 +39,7 @@ class AppCoordinatorTests: XCTestCase {
         expect(self.sut.currentCoordinator() is ProfileUpdateCoordinator).to(beTrue())
         
         profileManager.profile = DataStack().createObject(ofType: Profile.self)
-        expect(self.sut.currentCoordinator() is ProfileCoordinator).to(beTrue())
+        expect(self.sut.currentCoordinator() is TabbarCoordinator).to(beTrue())
     }
 
     func testWindowRootViewController() {

@@ -15,7 +15,6 @@ import RxTest
 import RxBlocking
 
 class ProfileViewModelTests: XCTestCase {
-    
     var sut: ProfileViewModel!
     var profile: Profile!
     var dataStack: DataStack!
@@ -39,6 +38,7 @@ class ProfileViewModelTests: XCTestCase {
     
     // Test completedCourses are properly updated after profile's completedCourses is updated
     func testUpdatingCompletedCourses() throws {
+        try testCompletedCourses(equalTo: [])
         
         var set1 = Set<Course>()
         let course1 = dataStack.createCourse(id: "1234", code: "AAA", numberOfCredits: 5, name: "Course 1")
@@ -49,13 +49,11 @@ class ProfileViewModelTests: XCTestCase {
         set1.insert(course3)
         
         profile.completedCourses = set1 as NSSet
+        let completedCourses = profile.rx.completedCourses
         
-        if let courses = try sut.completedCourses.toBlocking().first() as? [CourseCollectionViewCellViewModel] {
-            expect(courses) == [
-                CourseCollectionViewCellViewModel(course: course1),
-                CourseCollectionViewCellViewModel(course: course2),
-                CourseCollectionViewCellViewModel(course: course3)]
-        }
+        try testCompletedCourses(equalTo: [CourseCollectionViewCellViewModel(course: course1, completedCourses: completedCourses),
+                                       CourseCollectionViewCellViewModel(course: course2, completedCourses: completedCourses),
+                                       CourseCollectionViewCellViewModel(course: course3, completedCourses: completedCourses)])
         
         
         let course4 = dataStack.createCourse(id: "2222", code: "DDD", numberOfCredits: 5, name: "Course 4")
@@ -65,12 +63,13 @@ class ProfileViewModelTests: XCTestCase {
         set2.insert(course5)
         profile.completedCourses = set2 as NSSet
         
-        if let courses = try sut.completedCourses.toBlocking().first() as? [CourseCollectionViewCellViewModel] {
-            expect(courses) == [
-                CourseCollectionViewCellViewModel(course: course4),
-                CourseCollectionViewCellViewModel(course: course5)
-            ]
+        try testCompletedCourses(equalTo: [CourseCollectionViewCellViewModel(course: course4, completedCourses: completedCourses),
+                                           CourseCollectionViewCellViewModel(course: course5, completedCourses: completedCourses)])
+    }
+    
+    private func testCompletedCourses(equalTo courses: [CourseCollectionViewCellViewModel]) throws {
+        if let completedCourses = try sut.completedCourses.toBlocking().first() as? [CourseCollectionViewCellViewModel] {
+            expect(completedCourses) == courses
         }
     }
-
 }

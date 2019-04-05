@@ -11,12 +11,13 @@ import RxSwift
 import RxCocoa
 
 // MARK: ProfileViewModelType
-protocol ProfileViewModelType: ProfileBasedViewModelType {
+protocol ProfileViewModelType {
     var basicProfileInfo: BasicProfileInfoViewModelType { get }
     var completedCourses: Observable<[CourseCollectionViewCellViewModelType]> { get }
     
     var selectCourseDetail: AnyObserver<CourseDetailViewModelType> { get }
     var openCourseDetail: Observable<CourseDetailViewModelType> { get }
+    
     var profile: Profile { get }
 }
 

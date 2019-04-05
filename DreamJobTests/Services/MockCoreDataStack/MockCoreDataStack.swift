@@ -11,6 +11,10 @@ import CoreData
 
 class MockCoreDataStack: CoreDataStack {
     
+    var managedObjectContext: NSManagedObjectContext {
+        return NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    }
+    
     var objectsDeletedCount = 0
     
     var allRecordsDeleted = false

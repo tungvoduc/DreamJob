@@ -10,11 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ProfileBasedViewModelType {
-    init(profile: Profile)
-}
-
-protocol BasicProfileInfoViewModelType: ProfileBasedViewModelType {
+protocol BasicProfileInfoViewModelType {
     var fullName: Driver<String> { get }
     var studentNumber: Driver<String> { get }
     var email: Driver<String> { get }

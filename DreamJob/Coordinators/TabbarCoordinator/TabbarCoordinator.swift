@@ -26,10 +26,13 @@ class TabbarCoordinator: BaseCoordinator {
         
         // Other child coordinators
         jobListCoordinator = JobListCoordinator(profile: profile, dataStack: dataStack)
+        jobListCoordinator.toPresentable().tabBarItem = UITabBarItem(title: "Jobs", image: UIImage(named: "JobNormal"), selectedImage: UIImage(named: "JobSelected"))
         
         profileCoordinator = ProfileCoordinator(viewModel: ProfileViewModel(profile: profile))
+        profileCoordinator.toPresentable().tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "ProfileNormal"), selectedImage: UIImage(named: "ProfileSelected"))
         
         courseListCoordinator = CourseListCoordinator(viewModel: CourseListViewModel(profile: profile), profile: profile)
+        courseListCoordinator.toPresentable().tabBarItem = UITabBarItem(title: "Courses", image: UIImage(named: "CourseNormal"), selectedImage: UIImage(named: "CourseSelected"))
         
         super.init(router: router)
         

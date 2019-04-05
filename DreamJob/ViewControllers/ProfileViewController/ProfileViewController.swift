@@ -18,8 +18,6 @@ class ProfileViewController: UICollectionViewController {
     
     private(set) var viewModel: ProfileViewModelType
     
-    private let disposeBag = DisposeBag()
-    
     let sectionDataSource = RxCollectionViewSectionedReloadDataSource<ProfileViewSection>(
         configureCell: { dataSource, collectionView, indexPath, item in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! CourseCollectionViewCell
@@ -36,19 +34,37 @@ class ProfileViewController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Register cell classes
         collectionView!.register(UINib(nibName: "CourseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         collectionView!.register(UINib(nibName: "BasicProfileInfoCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
-
+        
         // Do any additional setup after loading the view.
         title = "Profile"
         setUpBindings()
     }
+}
+
+// MARK: UICollectionViewDelegateFlowLayout
+extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     
-    private func setUpBindings() {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 180)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width - 20, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    fileprivate func setUpBindings() {
         collectionView.dataSource = nil
         
         sectionDataSource.configureSupplementaryView = {[unowned self](dataSource, collectionView, kind, indexPath) -> UICollectionReusableView in
@@ -68,22 +84,4 @@ class ProfileViewController: UICollectionViewController {
             .bind(to: viewModel.selectCourseDetail)
             .disposed(by: disposeBag)
     }
-    
-}
-
-// MARK: UICollectionViewDelegateFlowLayout
-extension ProfileViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 180)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 20, height: 100)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    }
-    
 }

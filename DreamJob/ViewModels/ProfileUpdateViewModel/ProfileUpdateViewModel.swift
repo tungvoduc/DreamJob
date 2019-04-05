@@ -11,16 +11,15 @@ import RxSwift
 
 protocol ProfileUpdateViewModeling {
     
-    var isSubmitButtonEnabled: Observable<Bool> { get }
-    
+    // Commands
     var submitButtonTapped: AnyObserver<Void> { get }
     var didSetNewProfile: Observable<Profile> { get }
     
-    // Birthdate
     var updateBirthdate: AnyObserver<Date?> { get }
     var didUpdateBirthdate: Observable<Date?> { get }
     
-    // Info
+    // User interface
+    var isSubmitButtonEnabled: Observable<Bool> { get }
     var email: BehaviorSubject<String> { get }
     var address: BehaviorSubject<String> { get }
     var firstName: BehaviorSubject<String> { get }

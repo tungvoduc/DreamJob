@@ -8,6 +8,8 @@
 
 import XCTest
 import Nimble
+import RxCocoa
+import RxSwift
 @testable import DreamJob
 
 class CourseCollectionViewCellTests: XCTestCase {
@@ -51,6 +53,10 @@ class CourseCollectionViewCellTests: XCTestCase {
 // MARK: MockCourseBasedViewModel
 struct MockCourseBasedViewModel: CourseCollectionViewCellViewModelType {
     
+    var isCompleted: Observable<Bool> = PublishSubject<Bool>().asObservable()
+    
+    var course: Course
+    
     var name: String = ""
     
     var creditNumberString: String = ""
@@ -58,13 +64,14 @@ struct MockCourseBasedViewModel: CourseCollectionViewCellViewModelType {
     var skillString: String = ""
     
     init(course: Course) {
-        
+        self.course = course
     }
     
     init(name: String, creditNumberString: String, skillString: String) {
         self.name = name
         self.creditNumberString = creditNumberString
         self.skillString = skillString
+        course = DataStack.shared.createObject(ofType: Course.self)
     }
     
 }
